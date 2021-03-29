@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86b22113aa389b409c578096c3134e5, type: 3}
+  m_Name: DemoAsset_SO
+  m_EditorClassIdentifier: 
+  timelineLiteObjectData:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: TimelineLiteObjectData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        loop: 1
+        frameCount: 120
+        frameRate: 60
+        frameRateSecond: 0.016666668
+        tracks:
+        - id: 1
+        - id: 2
+    00000001:
+      type: {class: TLGroupTrackData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        name: Normal
+        enabled: 1
+        childTracks:
+        - id: 3
+        - id: 4
+        - id: 5
+    00000002:
+      type: {class: TLGroupTrackData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        name: Track Group
+        enabled: 0
+        childTracks:
+        - id: 6
+    00000003:
+      type: {class: TLBasicTrackData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        name: "\u63D2\u503C\u4F4D\u79FB"
+        enabled: 1
+        clips:
+        - id: 7
+        - id: 8
+    00000004:
+      type: {class: TLBasicTrackData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        name: "\u63D2\u503C\u65CB\u8F6C"
+        enabled: 1
+        clips:
+        - id: 9
+    00000005:
+      type: {class: TLBasicTrackData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        name: "\u63D2\u503C\u7F29\u653E"
+        enabled: 1
+        clips:
+        - id: 10
+        - id: 11
+        - id: 12
+        - id: 13
+    00000006:
+      type: {class: TLBasicTrackData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
+      data:
+        name: "\u63D2\u503C\u65CB\u8F6C"
+        enabled: 1
+        clips:
+        - id: 14
+    00000007:
+      type: {class: TweenPositionTLActionData, ns: CZToolKit.TimelineLite.Example,
+        asm: Assembly-CSharp}
+      data:
+        name: TweenPositionTrackClip
+        triggerOnSkip: 1
+        start: 0
+        frameCount: 60
+        end: 60
+        startTime: 0
+        duration: 1
+        endTime: 1
+        startPosition: {x: -5, y: 0, z: 0}
+        endPosition: {x: 5, y: 0, z: 0}
+        ease: 10
+    00000008:
+      type: {class: TweenPositionTLActionData, ns: CZToolKit.TimelineLite.Example,
+        asm: Assembly-CSharp}
+      data:
+        name: TweenPositionTrackClip
+        triggerOnSkip: 1
+        start: 60
+        frameCount: 60
+        end: 120
+        startTime: 1
+        duration: 1
+        endTime: 2
+        startPosition: {x: 5, y: 0, z: 0}
+        endPosition: {x: -5, y: 0, z: 0}
+        ease: 10
+    00000009:
+      type: {class: TweenRotationTLActionData, ns: CZToolKit.TimelineLite.Example,
+        asm: Assembly-CSharp}
+      data:
+        name: TweenRotationTLClipAsset
+        triggerOnSkip: 1
+        start: 0
+        frameCount: 120
+        end: 120
+        startTime: 0
+        duration: 2
+        endTime: 2
+        from: {x: 0, y: 0, z: 0}
+        to: {x: 0, y: 360, z: 0}
+        ease: 0
+    0000000A:
+      type: {class: TweenScaleTLActionData, ns: CZToolKit.TimelineLite.Example, asm: Assembly-CSharp}
+      data:
+        name: TweenScaleTLClipAsset
+        triggerOnSkip: 1
+        start: 0
+        frameCount: 30
+        end: 30
+        startTime: 0
+        duration: 0.5
+        endTime: 0.5
+        from: {x: 1, y: 1, z: 1}
+        to: {x: 0.5, y: 0.5, z: 0.5}
+        ease: 0
+    0000000B:
+      type: {class: TweenScaleTLActionData, ns: CZToolKit.TimelineLite.Example, asm: Assembly-CSharp}
+      data:
+        name: TweenScaleTLClipAsset
+        triggerOnSkip: 1
+        start: 30
+        frameCount: 30
+        end: 60
+        startTime: 0.5
+        duration: 0.5
+        endTime: 1
+        from: {x: 0.5, y: 0.5, z: 0.5}
+        to: {x: 1, y: 1, z: 1}
+        ease: 0
+    0000000C:
+      type: {class: TweenScaleTLActionData, ns: CZToolKit.TimelineLite.Example, asm: Assembly-CSharp}
+      data:
+        name: TweenScaleTLClipAsset
+        triggerOnSkip: 1
+        start: 60
+        frameCount: 30
+        end: 90
+        startTime: 1
+        duration: 0.5
+        endTime: 1.5
+        from: {x: 1, y: 1, z: 1}
+        to: {x: 0.5, y: 0.5, z: 0.5}
+        ease: 0
+    0000000D:
+      type: {class: TweenScaleTLActionData, ns: CZToolKit.TimelineLite.Example, asm: Assembly-CSharp}
+      data:
+        name: TweenScaleTLClipAsset
+        triggerOnSkip: 1
+        start: 90
+        frameCount: 30
+        end: 120
+        startTime: 1.5
+        duration: 0.5
+        endTime: 2
+        from: {x: 0.5, y: 0.5, z: 0.5}
+        to: {x: 1, y: 1, z: 1}
+        ease: 0
+    0000000E:
+      type: {class: TweenRotationTLActionData, ns: CZToolKit.TimelineLite.Example,
+        asm: Assembly-CSharp}
+      data:
+        name: TweenRotationTLClipAsset
+        triggerOnSkip: 1
+        start: 0
+        frameCount: 120
+        end: 120
+        startTime: 0
+        duration: 2
+        endTime: 2
+        from: {x: 0, y: 0, z: 0}
+        to: {x: 0, y: 7200, z: 0}
+        ease: 0

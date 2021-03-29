@@ -1,0 +1,54 @@
+using CZToolKit.TimelineLite;
+using System;
+using UnityEngine;
+
+[Serializable]
+public class #ClassName#TLAction : TLAction<#ClassName#TLActionData>
+{
+    /// <summary> 不能删 </summary>
+    public #ClassName#TLAction()
+    {
+
+    }
+
+    /// <summary> 不能删 </summary>
+    public #ClassName#TLAction(ITLTrack _track, #ClassName#TLActionData _actionData) : base(_track, _actionData)
+    {
+
+    }
+
+    protected override void OnInitialize()
+    {
+        
+    }
+
+    protected override void OnGraphStart()
+    {
+
+    }
+
+    protected override void OnActionStart(float _timeSinceActionStart)
+    {
+
+    }
+
+    protected override void OnUpdateAction(float _timeSinceActionStart)
+    {
+
+    }
+
+    protected override void OnActionFinish()
+    {
+
+    }
+
+    protected override void OnActionStop()
+    {
+
+    }
+
+    protected override void OnGraphStop()
+    {
+
+    }
+}

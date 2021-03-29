@@ -1,0 +1,20 @@
+// 请将此脚本放在Editor目录下
+using CZToolKit.TimelineLite;
+using System;
+using UnityEngine;
+using UnityEngine.Timeline;
+
+[Serializable]
+[TrackColor(#r#, #g#, #b#)]
+[TLTrackAssetMenuItem("#MenuItem#")]
+[TrackClipType(typeof(#ClassName#TLClipAsset))]
+public class #ClassName#TLTrackAsset : TLBasicTrackAsset 
+{
+		// 若有需求可返回自定义的轨道数据对象
+        public override TLBasicTrackData CreateTrackData()
+        {
+            TLBasicTrackData trackData = new TLBasicTrackData();
+
+            return trackData;
+        }
+}

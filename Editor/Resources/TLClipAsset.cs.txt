@@ -1,0 +1,29 @@
+// 请将此脚本放在Editor目录下
+using CZToolKit.TimelineLite;
+using System;
+using UnityEngine;
+using UnityEngine.Timeline;
+
+[Serializable]
+public class #ClassName#TLClipAsset : TLBasicClipAsset<#ClassName#TLActionData> 
+{
+    /// <summary> 创建<see cref="#ClassName#TLActionData" />对象 </summary>
+        public override TLActionData CreateActionData()
+        {
+            #ClassName#TLActionData actionData = new #ClassName#TLActionData();
+            // 在此进行对应的数值设置
+          
+
+            return actionData;
+        }
+
+        protected override void OnDrawGizmos_Lite(PlayableDirectorLite _playable, TimelineClip _timelineClip)
+        {
+
+        }
+
+        protected override void OnDrawGizmosSelected_Lite(PlayableDirectorLite _playable, TimelineClip _timelineClip)
+        {
+
+        }
+}

@@ -1,0 +1,10 @@
+using CZToolKit.TimelineLite;
+using System;
+using UnityEngine;
+
+/// <summary> <see cref="#ClassName#TLAction"/> </summary>
+[Serializable]
+public class #ClassName#TLActionData : TLActionData 
+{
+
+}
