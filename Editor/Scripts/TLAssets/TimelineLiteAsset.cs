@@ -8,6 +8,9 @@ namespace CZToolKit.TimelineLite
     [CreateAssetMenu(menuName = "CZToolKit/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset
     {
+        [TextArea(minLines: 3, maxLines: 7)]
+        public string Description = "";
+
         /// <summary> 上次导出的存储位置 </summary>
         [ReadOnly]
         public string previousPath = "";
@@ -73,14 +76,18 @@ namespace CZToolKit.TimelineLite
                 {
                     TLBasicClipAsset clipAsset = clip.asset as TLBasicClipAsset;
                     TLActionData actionData = clipAsset.CreateActionData();
-                    actionData.name = clip.displayName;
-                    actionData.triggerOnSkip = clipAsset.TriggerOnSkip;
-                    actionData.start = (int)clip.GetStartFrame();
-                    actionData.end = (int)clip.GetEndFrame();
-                    actionData.frameCount = (int)clip.GetFrameCount();
-                    actionData.startTime = (float)clip.start;
-                    actionData.endTime = (float)clip.end;
-                    actionData.duration = actionData.endTime - actionData.startTime;
+
+                    ActionBaseInfo actionBaseInfo = new ActionBaseInfo();
+                    actionBaseInfo.name = clip.displayName;
+                    actionBaseInfo.triggerOnSkip = clipAsset.TriggerOnSkip;
+                    actionBaseInfo.start = (int)clip.GetStartFrame();
+                    actionBaseInfo.end = (int)clip.GetEndFrame();
+                    actionBaseInfo.frameCount = (int)clip.GetFrameCount();
+                    actionBaseInfo.startTime = (float)clip.start;
+                    actionBaseInfo.endTime = (float)clip.end;
+                    actionBaseInfo.duration = actionBaseInfo.endTime - actionBaseInfo.startTime;
+                    actionData.ActionBaseInfo = actionBaseInfo;
+
                     // 获取类型片段，并添加到Track对象
                     basicTrackData.Clips.Add(actionData);
                 }

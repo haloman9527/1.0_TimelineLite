@@ -17,17 +17,22 @@ namespace CZToolKit.TimelineLite
 
         protected override void OnGraphStart()
         {
-            updateMode = Playable.UpdateMode;
+            updateMode = Master.UpdateMode;
         }
 
         protected override void OnUpdateAction(float _timeSinceActionStart)
         {
-            Playable.UpdateMode = TActionData.updateMode;
+            Master.UpdateMode = TActionData.updateMode;
         }
 
         protected override void OnActionFinish()
         {
-            Playable.UpdateMode = updateMode;
+            Master.UpdateMode = updateMode;
+        }
+
+        protected override void OnActionStop()
+        {
+            Master.UpdateMode = updateMode;
         }
     }
 }

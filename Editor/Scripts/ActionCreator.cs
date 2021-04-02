@@ -120,7 +120,7 @@ namespace CZToolKit.TimelineLite.Editors
                 }
 
                 AssetDatabase.Refresh();
-                this.Close();
+                Close();
             }
         }
     }

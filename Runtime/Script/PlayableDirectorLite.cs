@@ -44,13 +44,13 @@ namespace CZToolKit.TimelineLite
             get { return speed; }
             set
             {
-//                if (IsPlaying)
-//                {
-//#if UNITY_EDITOR
-//                    Debug.LogError("无法在播放中设置速度");
-//#endif
-//                    return;
-//                }
+                //                if (IsPlaying)
+                //                {
+                //#if UNITY_EDITOR
+                //                    Debug.LogError("无法在播放中设置速度");
+                //#endif
+                //                    return;
+                //                }
                 speed = value;
                 isPlayingForward = speed * Time.timeScale >= 0;
             }
@@ -91,12 +91,12 @@ namespace CZToolKit.TimelineLite
         /// <summary> 黑板数据 </summary>
         public Blackboard Blackboard => blackboard;
 
-        protected virtual void Awake() { }
-
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             isPlayingForward = Speed * Time.timeScale >= 0;
         }
+
+        protected virtual void Start() { }
 
         protected virtual void Update()
         {
@@ -187,7 +187,6 @@ namespace CZToolKit.TimelineLite
             if (playStatus != PlayStatus.Stopped)
                 Stop();
             timeline = _timeline;
-            isPlayingForward = Speed * Time.timeScale >= 0;
             if (timeline == null) return;
 
             if (!timeline.Initialized)

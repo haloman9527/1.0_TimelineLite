@@ -1,4 +1,5 @@
 ﻿using CZToolKit.Core;
+using CZToolKit.Core.Blackboards;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -104,9 +105,9 @@ namespace CZToolKit.TimelineLite
         }
         #endregion
 
-        T timelineData;
         bool initialized = false;
-        PlayableDirectorLite owner;
+        T timelineData;
+        Blackboard blackboard = new Blackboard();
         [SerializeField]
         List<ITLTrack> tracks = new List<ITLTrack>();
 
@@ -114,11 +115,13 @@ namespace CZToolKit.TimelineLite
 
         public bool Loop { get { return timelineData.Loop; } }
 
+        public Blackboard Blackboard { get { return blackboard; } }
+
         public T TTimelineData { get { return timelineData; } }
 
         public TimelineLiteObjectData TimelineData { get { return timelineData; } }
 
-        public PlayableDirectorLite Owner { get { return owner; } }
+        public PlayableDirectorLite Master { get; private set; }
 
         public int FrameCount
         {
@@ -153,16 +156,18 @@ namespace CZToolKit.TimelineLite
         }
 
         /// <summary> 初始化函数 </summary>
-        public void Initialize(PlayableDirectorLite _owner)
+        public void Initialize(PlayableDirectorLite _master)
         {
-            owner = _owner;
+            Master = _master;
             for (int i = 0; i != tracks.Count; ++i)
             {
-                tracks[i].Initialize(_owner);
+                tracks[i].Initialize(_master);
             }
-
+            OnInitialized();
             initialized = true;
         }
+
+        protected virtual void OnInitialized() { }
 
         /// <summary> 当开始播放时执行 </summary>
         public void Start()
@@ -215,6 +220,7 @@ namespace CZToolKit.TimelineLite
         /// <summary> 重置 </summary>
         public void Reset()
         {
+            blackboard.Clear();
             for (int i = 0; i != tracks.Count; ++i)
             {
                 tracks[i].Reset();

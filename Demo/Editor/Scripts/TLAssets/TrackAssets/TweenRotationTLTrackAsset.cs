@@ -7,6 +7,7 @@ namespace CZToolKit.TimelineLite.Example
 {
     [Serializable]
     [TrackColor(0.96f, 0.44f, 0.47f)]
+    [TLTrackMinHeight(20)]
     [TLTrackAssetMenuItem("Example/插值旋转")]
     [TrackClipType(typeof(TweenRotationTLClipAsset))]
     public class TweenRotationTLTrackAsset : TLBasicTrackAsset

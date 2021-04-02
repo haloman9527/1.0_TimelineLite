@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace CZToolKit.TimelineLite.Example
         private void OnEnable()
         {
             if (timeline == null) return;
-            GetComponent<PlayableDirectorLite>().Play(new TimelineLiteObject<TimelineLiteObjectData>(Instantiate(timeline).TimelineLiteObjectData));
+            GetComponent<PlayableDirectorLite>().Play(new TimelineLiteObject<TimelineLiteObjectData>(timeline.TimelineLiteObjectData));
         }
 
         private void Update()

@@ -487,12 +487,6 @@ namespace CZToolKit.TimelineLite.Editors
                 }
             }
             menu = menu.OrderBy(a => a.Key).ToList();
-            //menu.Sort((a, b) =>
-            //{
-            //    if (a.Key[0] > b.Key[0])
-            //        return 1;
-            //    return -1;
-            //});
 
             trackTypeMenu = new GenericMenu();
             foreach (var kv in menu)
@@ -611,7 +605,15 @@ namespace CZToolKit.TimelineLite.Editors
                 rect.height = 15;
                 rect.x = 0;
                 rect.width = rect.width / 4;
-                if (!EditorApplication.isPlaying)
+                if (EditorApplication.isPlaying)
+                {
+                    // 上一帧按钮
+                    EditorGUI.BeginDisabledGroup(!hasPlayable || playable.PlayStatus != PlayStatus.Pausing);
+                    if (GUI.Button(rect, EditorGUIUtility.IconContent("Animation.PrevKey"), (GUIStyle)"MiniToolbarButton"))
+                        playable.SetFrame(playable.CurrentFrame - 1);
+                    EditorGUI.EndDisabledGroup();
+                }
+                else
                 {
                     // 非播放状态下
                     EditorGUI.BeginDisabledGroup(!inspectorTimelineLite);
@@ -622,20 +624,10 @@ namespace CZToolKit.TimelineLite.Editors
                     }
                     EditorGUI.EndDisabledGroup();
                 }
-                else
-                {
-                    // 上一帧按钮
-                    EditorGUI.BeginDisabledGroup(!hasPlayable || playable.PlayStatus != PlayStatus.Pausing);
-                    if (GUI.Button(rect, EditorGUIUtility.IconContent("Animation.PrevKey"), (GUIStyle)"MiniToolbarButton"))
-                        playable.SetFrame(playable.CurrentFrame - 1);
-                    EditorGUI.EndDisabledGroup();
-                }
 
                 EditorGUI.BeginDisabledGroup(!EditorApplication.isPlaying);
                 rect.x += rect.width;
-                // 如果当前正在播放，那么接下来的按钮用于控制播放和暂停
-                // 否则用于播放当前显示
-                if (hasPlayable && playable.PlayStatus != PlayStatus.Stopped)
+                if (hasPlayable)
                 {
                     switch (playable.PlayStatus)
                     {
@@ -647,29 +639,44 @@ namespace CZToolKit.TimelineLite.Editors
                             if (GUI.Button(rect, EditorGUIUtility.IconContent("PlayButton"), (GUIStyle)"MiniToolbarButton"))
                                 playable.Resume();
                             break;
-                        default:
+                        case PlayStatus.Stopped:
+                            if (playable.Timeline != null)
+                            {
+                                if (GUI.Button(rect, EditorGUIUtility.IconContent("PlayButton"), (GUIStyle)"MiniToolbarButton"))
+                                    playable.Play();
+                            }
+                            else
+                            {
+                                EditorGUI.BeginDisabledGroup(!inspectorTimelineLite);
+                                if (GUI.Button(rect, EditorGUIUtility.IconContent("PlayButton"), (GUIStyle)"MiniToolbarButton"))
+                                {
+                                    TimelineLiteObjectData data = timelineLiteAsset.Extract();
+                                    ITimelineLiteObject timelineLiteObject = Activator.CreateInstance(timelineLiteAsset.TargetObjectType, data) as ITimelineLiteObject;
+                                    Playable.Play(timelineLiteObject);
+                                }
+                                EditorGUI.EndDisabledGroup();
+                            }
                             break;
                     }
                 }
                 else
                 {
-                    EditorGUI.BeginDisabledGroup(!hasPlayable || !inspectorTimelineLite);
-                    if (GUI.Button(rect, EditorGUIUtility.IconContent("PlayButton"), (GUIStyle)"MiniToolbarButton"))
-                    {
-                        TimelineLiteObjectData data = timelineLiteAsset.Extract();
-                        ITimelineLiteObject timelineLiteObject = Activator.CreateInstance(timelineLiteAsset.TargetObjectType, data) as ITimelineLiteObject;
-                        Playable.Play(timelineLiteObject);
-                    }
-                    EditorGUI.EndDisabledGroup();
+                    GUI.Button(rect, EditorGUIUtility.IconContent("PlayButton"), (GUIStyle)"MiniToolbarButton");
                 }
                 EditorGUI.EndDisabledGroup();
 
                 // 下一帧按钮
                 rect.x += rect.width;
 
-                if (!EditorApplication.isPlaying)
+                if (EditorApplication.isPlaying)
                 {
-                    // 非播放状态下
+                    EditorGUI.BeginDisabledGroup(!hasPlayable || playable.PlayStatus != PlayStatus.Pausing);
+                    if (GUI.Button(rect, EditorGUIUtility.IconContent("Animation.NextKey"), (GUIStyle)"MiniToolbarButton"))
+                        playable.SetFrame(playable.CurrentFrame + 1);
+                    EditorGUI.EndDisabledGroup();
+                }
+                else
+                {
                     EditorGUI.BeginDisabledGroup(!inspectorTimelineLite);
                     if (GUI.Button(rect, EditorGUIUtility.IconContent("Animation.NextKey"), (GUIStyle)"MiniToolbarButton"))
                     {
@@ -679,16 +686,9 @@ namespace CZToolKit.TimelineLite.Editors
                     }
                     EditorGUI.EndDisabledGroup();
                 }
-                else
-                {
-                    EditorGUI.BeginDisabledGroup(!hasPlayable || playable.PlayStatus != PlayStatus.Pausing);
-                    if (GUI.Button(rect, EditorGUIUtility.IconContent("Animation.NextKey"), (GUIStyle)"MiniToolbarButton"))
-                        playable.SetFrame(playable.CurrentFrame + 1);
-                    EditorGUI.EndDisabledGroup();
-                }
 
                 rect.x += rect.width;
-                EditorGUI.BeginDisabledGroup(!hasPlayable || playable.PlayStatus == PlayStatus.Stopped);
+                EditorGUI.BeginDisabledGroup(!hasPlayable || (playable.PlayStatus == PlayStatus.Stopped && playable.Timeline == null));
                 if (GUI.Button(rect, EditorGUIUtility.IconContent("PreMatQuad"), (GUIStyle)"MiniToolbarButton"))
                     playable.Play<ITimelineLiteObject>(null);
                 EditorGUI.EndDisabledGroup();

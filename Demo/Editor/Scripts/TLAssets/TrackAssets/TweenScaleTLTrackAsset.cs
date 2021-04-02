@@ -7,6 +7,7 @@ namespace CZToolKit.TimelineLite.Example
 {
     [Serializable]
     [TrackColor(0f, 0f, 0.5f)]
+    [TLTrackMinHeight(20)]
     [TLTrackAssetMenuItem("Example/插值缩放")]
     [TrackClipType(typeof(TweenScaleTLClipAsset))]
     public class TweenScaleTLTrackAsset : TLBasicTrackAsset

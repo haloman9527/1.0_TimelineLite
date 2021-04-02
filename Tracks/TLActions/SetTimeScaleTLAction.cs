@@ -29,5 +29,10 @@ namespace CZToolKit.TimelineLite
         {
             Time.timeScale = timeScale;
         }
+
+        protected override void OnActionStop()
+        {
+            Time.timeScale = timeScale;
+        }
     }
 }

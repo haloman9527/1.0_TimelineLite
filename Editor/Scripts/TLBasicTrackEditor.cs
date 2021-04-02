@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using CZToolKit.Core;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -11,7 +10,12 @@ namespace CZToolKit.TimelineLite.Editors
     {
         public override TrackDrawOptions GetTrackOptions(TrackAsset track, Object binding)
         {
-            return base.GetTrackOptions(track, binding);
+            TrackDrawOptions options = base.GetTrackOptions(track, binding);
+
+            if (AttributeCache.TryGetTypeAttribute(track.GetType(), out TLTrackMinHeightAttribute attribute))
+                options.minimumHeight = attribute.MinHeight;
+
+            return options;
         }
     }
 }

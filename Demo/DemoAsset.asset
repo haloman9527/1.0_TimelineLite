@@ -297,9 +297,10 @@ MonoBehaviour:
   m_EditorSettings:
     m_Framerate: 60
   m_DurationMode: 0
-  m_MarkerTrack: {fileID: 0}
-  previousPath: Assets/CZToolKits/1.0_TimelineLite/Example/DemoAsset_SO
-  loop: 1
+  m_MarkerTrack: {fileID: 7411562706728997783}
+  Description: 
+  previousPath: Assets/CZToolKits/1.0_TimelineLite/Demo/DemoAsset_SO
+  loop: 0
 --- !u!114 &150316366069661334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,7 +419,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -8401862466404239197}
-    m_Duration: 2.5
+    m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1085629015170112700}
     m_EaseInDuration: 0
@@ -484,10 +485,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: TweenPositionTLClipAsset
   - m_Version: 1
-    m_Start: 2.5
+    m_Start: 1
     m_ClipIn: 0
     m_Asset: {fileID: -240887187807315144}
-    m_Duration: 2.5
+    m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1085629015170112700}
     m_EaseInDuration: 0
@@ -580,7 +581,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -615627595118286344}
-    m_Duration: 5
+    m_Duration: 2
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1281332526362535881}
     m_EaseInDuration: 0
@@ -739,7 +740,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -3901850919869491062}
-    m_Duration: 2.5
+    m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5079816878586409557}
     m_EaseInDuration: 0
@@ -772,25 +773,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -805,10 +788,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: TweenScaleTLClipAsset
   - m_Version: 1
-    m_Start: 2.5
+    m_Start: 1
     m_ClipIn: 0
     m_Asset: {fileID: 6178995687117852617}
-    m_Duration: 2.5
+    m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5079816878586409557}
     m_EaseInDuration: 0
@@ -817,25 +800,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1208,6 +1173,29 @@ MonoBehaviour:
   from: {x: 1, y: 1, z: 1}
   to: {x: 0.5, y: 0.5, z: 0.5}
   ease: 0
+--- !u!114 &7411562706728997783
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a16748d9461eae46a725db9776d5390, type: 3}
+  m_Name: Markers
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!114 &8551783579946900518
 MonoBehaviour:
   m_ObjectHideFlags: 1

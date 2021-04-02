@@ -23,7 +23,7 @@ namespace CZToolKit.TimelineLite.Example
         protected override void OnUpdateAction(float _timeSinceActionStart)
         {
             float t = _timeSinceActionStart / Duration;
-            Playable.transform.localScale = new Vector3(
+            Master.transform.localScale = new Vector3(
                 Easing.Tween(TActionData.from.x, TActionData.to.x, t, TActionData.ease),
                 Easing.Tween(TActionData.from.y, TActionData.to.y, t, TActionData.ease),
                 Easing.Tween(TActionData.from.z, TActionData.to.z, t, TActionData.ease)

@@ -20,7 +20,7 @@ namespace CZToolKit.TimelineLite
         bool HasFinished { get; }
         ITLTrack Track { get; }
 
-        void Initialize(PlayableDirectorLite _owner);
+        void Initialize(PlayableDirectorLite _master);
 
         void GraphStart();
 
@@ -47,50 +47,48 @@ namespace CZToolKit.TimelineLite
     /// <typeparam name="T"> 数据类 </typeparam>
     public abstract class TLAction<T> : ITLAction where T : TLActionData, new()
     {
-        T actionData;
-        ITLTrack track;
-        PlayableDirectorLite playable;
+        //T actionData;
 
-        public T TActionData { get { return actionData; } }
-        public TLActionData ActionData { get { return actionData; } }
+        public T TActionData { get; set; }
+        public TLActionData ActionData { get { return TActionData; } }
 
-        public string Name { get { return TActionData.name; } }
+        public string Name { get { return ActionData.ActionBaseInfo.name; } }
 
-        public bool TriggerOnSkip { get { return actionData.triggerOnSkip; } }
+        public bool TriggerOnSkip { get { return ActionData.ActionBaseInfo.triggerOnSkip; } }
 
-        public int Start { get { return TActionData.start; } }
+        public int Start { get { return ActionData.ActionBaseInfo.start; } }
 
-        public int FrameCount { get { return TActionData.frameCount; } }
+        public int FrameCount { get { return ActionData.ActionBaseInfo.frameCount; } }
 
-        public int End { get { return TActionData.end; } }
+        public int End { get { return ActionData.ActionBaseInfo.end; } }
 
-        public float StartTime { get { return TActionData.startTime; } }
+        public float StartTime { get { return ActionData.ActionBaseInfo.startTime; } }
 
-        public float Duration { get { return TActionData.duration; } }
+        public float Duration { get { return ActionData.ActionBaseInfo.duration; } }
 
-        public float EndTime { get { return TActionData.endTime; } }
+        public float EndTime { get { return ActionData.ActionBaseInfo.endTime; } }
 
         public bool HasTriggered { get; private set; }
 
         public bool HasFinished { get; private set; }
 
         /// <summary> Action所属Track </summary>
-        public ITLTrack Track { get { return track; } }
+        public ITLTrack Track { get; private set; }
 
-        protected PlayableDirectorLite Playable { get { return playable; } }
+        protected PlayableDirectorLite Master { get; private set; }
 
         public TLAction() { }
 
-        public TLAction(ITLTrack _track, T _logicData) { track = _track; actionData = _logicData; }
+        public TLAction(ITLTrack _track, T _actionData) { Track = _track; TActionData = _actionData; }
 
-        public void Initialize(PlayableDirectorLite _owner)
+        public void Initialize(PlayableDirectorLite _master)
         {
-            playable = _owner;
-            OnInitialize();
+            Master = _master;
+            OnInitialized();
         }
 
         /// <summary> 初始化时触发 </summary>
-        protected virtual void OnInitialize() { }
+        protected virtual void OnInitialized() { }
 
         public void GraphStart() { OnGraphStart(); }
 
@@ -114,7 +112,7 @@ namespace CZToolKit.TimelineLite
         }
 
         /// <summary> 片段开始时触发 </summary>
-        /// <param name="_timeSinceActionStart"></param>
+        /// <param name="_timeSinceActionStart">  </param>
         protected virtual void OnActionStart(float _timeSinceActionStart) { }
 
         public void UpdateAction(int _frameSinceClipStart, float _timeSinceActionStart)
@@ -126,7 +124,7 @@ namespace CZToolKit.TimelineLite
 
             if (!HasFinished)
             {
-                if (Playable.IsPlayingForward)
+                if (Master.IsPlayingForward)
                 {
                     if (_frameSinceClipStart >= FrameCount)
                         ActionFinish();
@@ -140,7 +138,7 @@ namespace CZToolKit.TimelineLite
         }
 
         /// <summary> 每帧触发 </summary>
-        /// <param name="_timeSinceActionStart"></param>
+        /// <param name="_timeSinceActionStart">  </param>
         protected virtual void OnUpdateAction(float _timeSinceActionStart) { }
 
         public void ActionFinish()

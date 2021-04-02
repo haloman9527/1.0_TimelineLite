@@ -19,8 +19,8 @@ MonoBehaviour:
     00000000:
       type: {class: TimelineLiteObjectData, ns: CZToolKit.TimelineLite, asm: Assembly-CSharp}
       data:
-        loop: 1
-        frameCount: 300
+        loop: 0
+        frameCount: 120
         frameRate: 60
         frameRateSecond: 0.016666668
         tracks:
@@ -54,14 +54,15 @@ MonoBehaviour:
       type: {class: TweenPositionTLActionData, ns: CZToolKit.TimelineLite.Example,
         asm: Assembly-CSharp}
       data:
-        name: TweenPositionTLClipAsset
-        triggerOnSkip: 1
-        start: 0
-        frameCount: 150
-        end: 150
-        startTime: 0
-        duration: 2.5
-        endTime: 2.5
+        actionBaseInfo:
+          name: TweenPositionTLClipAsset
+          triggerOnSkip: 1
+          start: 0
+          frameCount: 60
+          end: 60
+          startTime: 0
+          duration: 1
+          endTime: 1
         startPosition: {x: -5, y: 0, z: 0}
         endPosition: {x: 5, y: 0, z: 0}
         ease: 0
@@ -69,14 +70,15 @@ MonoBehaviour:
       type: {class: TweenPositionTLActionData, ns: CZToolKit.TimelineLite.Example,
         asm: Assembly-CSharp}
       data:
-        name: TweenPositionTLClipAsset
-        triggerOnSkip: 1
-        start: 150
-        frameCount: 150
-        end: 300
-        startTime: 2.5
-        duration: 2.5
-        endTime: 5
+        actionBaseInfo:
+          name: TweenPositionTLClipAsset
+          triggerOnSkip: 1
+          start: 60
+          frameCount: 60
+          end: 120
+          startTime: 1
+          duration: 1
+          endTime: 2
         startPosition: {x: 5, y: 0, z: 0}
         endPosition: {x: -5, y: 0, z: 0}
         ease: 0
@@ -84,42 +86,45 @@ MonoBehaviour:
       type: {class: TweenRotationTLActionData, ns: CZToolKit.TimelineLite.Example,
         asm: Assembly-CSharp}
       data:
-        name: TweenRotationTLClipAsset
-        triggerOnSkip: 1
-        start: 0
-        frameCount: 300
-        end: 300
-        startTime: 0
-        duration: 5
-        endTime: 5
+        actionBaseInfo:
+          name: TweenRotationTLClipAsset
+          triggerOnSkip: 1
+          start: 0
+          frameCount: 120
+          end: 120
+          startTime: 0
+          duration: 2
+          endTime: 2
         from: {x: 0, y: 0, z: 0}
         to: {x: 0, y: 360, z: 0}
         ease: 0
     00000007:
       type: {class: TweenScaleTLActionData, ns: CZToolKit.TimelineLite.Example, asm: Assembly-CSharp}
       data:
-        name: TweenScaleTLClipAsset
-        triggerOnSkip: 1
-        start: 0
-        frameCount: 150
-        end: 150
-        startTime: 0
-        duration: 2.5
-        endTime: 2.5
+        actionBaseInfo:
+          name: TweenScaleTLClipAsset
+          triggerOnSkip: 1
+          start: 0
+          frameCount: 60
+          end: 60
+          startTime: 0
+          duration: 1
+          endTime: 1
         from: {x: 1, y: 1, z: 1}
         to: {x: 0.7, y: 0.7, z: 0.7}
         ease: 0
     00000008:
       type: {class: TweenScaleTLActionData, ns: CZToolKit.TimelineLite.Example, asm: Assembly-CSharp}
       data:
-        name: TweenScaleTLClipAsset
-        triggerOnSkip: 1
-        start: 150
-        frameCount: 150
-        end: 300
-        startTime: 2.5
-        duration: 2.5
-        endTime: 5
+        actionBaseInfo:
+          name: TweenScaleTLClipAsset
+          triggerOnSkip: 1
+          start: 60
+          frameCount: 60
+          end: 120
+          startTime: 1
+          duration: 1
+          endTime: 2
         from: {x: 0.7, y: 0.7, z: 0.7}
         to: {x: 1, y: 1, z: 1}
         ease: 0
