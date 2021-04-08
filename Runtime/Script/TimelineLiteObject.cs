@@ -59,8 +59,7 @@ namespace CZToolKit.TimelineLite
         static TimelineLiteObject()
         {
             ActionDataDict = new Dictionary<Type, Type>();
-            List<Type> actionTypes = ChildrenTypeCache.GetChildrenTypes<ITLAction>();
-            foreach (var actionType in actionTypes)
+            foreach (var actionType in ChildrenTypeCache.GetChildrenTypes<ITLAction>())
             {
 
                 Type actionDataType = actionType.GetProperty("TActionData",

@@ -9,6 +9,7 @@ using CZToolKit.Core;
 using CZToolKit.Core.Editors;
 using System.Reflection;
 using System.Linq;
+using UnityEngine.UIElements;
 
 namespace CZToolKit.TimelineLite.Editors
 {
@@ -216,7 +217,6 @@ namespace CZToolKit.TimelineLite.Editors
             //        }
             //    }
             //}
-
 
 #if UNITY_2019_1_OR_NEWER
             // 只有选中后调用
@@ -474,8 +474,7 @@ namespace CZToolKit.TimelineLite.Editors
             toolBoxTreeView.Reload();
 
             List<KeyValuePair<string, Type>> menu = new List<KeyValuePair<string, Type>>();
-            List<Type> types = ChildrenTypeCache.GetChildrenTypes(TimelineLiteTrackAssetType);
-            foreach (Type trackType in types)
+            foreach (Type trackType in ChildrenTypeCache.GetChildrenTypes(TimelineLiteTrackAssetType))
             {
                 TLTrackAssetMenuItemAttribute attrib;
                 if (AttributeCache.TryGetTypeAttribute(trackType, out attrib))
@@ -763,6 +762,7 @@ namespace CZToolKit.TimelineLite.Editors
             TimelineLiteAsset currentTimelineLiteAsset = TimelineEditor.timelineAsset as TimelineLiteAsset;
 #endif
 #if ODIN_INSPECTOR
+
             if (timelineLiteAsset != currentTimelineLiteAsset)
             {
                 timelineLiteAsset = currentTimelineLiteAsset;
