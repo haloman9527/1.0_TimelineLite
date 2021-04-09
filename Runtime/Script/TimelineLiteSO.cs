@@ -3,7 +3,11 @@
 namespace CZToolKit.TimelineLite
 {
     [SerializeField]
+#if ODIN_INSPECTOR
+    public class TimelineLiteSO : Sirenix.OdinInspector.SerializedScriptableObject
+#else
     public class TimelineLiteSO : ScriptableObject
+#endif
     {
 #if UNITY_2019_1_OR_NEWER
         [SerializeReference]

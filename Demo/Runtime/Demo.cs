@@ -13,6 +13,7 @@ namespace CZToolKit.TimelineLite.Example
         private void OnEnable()
         {
             if (timeline == null) return;
+
             GetComponent<PlayableDirectorLite>().Play(new TimelineLiteObject<TimelineLiteObjectData>(timeline.TimelineLiteObjectData));
         }
 

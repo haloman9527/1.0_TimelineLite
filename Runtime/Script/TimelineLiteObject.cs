@@ -106,7 +106,7 @@ namespace CZToolKit.TimelineLite
 
         bool initialized = false;
         T timelineData;
-        Blackboard blackboard = new Blackboard();
+        Dictionary<string, ICZType> blackboard = new Dictionary<string, ICZType>();
         [SerializeField]
         List<ITLTrack> tracks = new List<ITLTrack>();
 
@@ -114,7 +114,7 @@ namespace CZToolKit.TimelineLite
 
         public bool Loop { get { return timelineData.Loop; } }
 
-        public Blackboard Blackboard { get { return blackboard; } }
+        public Dictionary<string, ICZType> Blackboard { get { return blackboard; } }
 
         public T TTimelineData { get { return timelineData; } }
 

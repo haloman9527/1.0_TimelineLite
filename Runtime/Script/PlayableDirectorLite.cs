@@ -1,6 +1,7 @@
 ﻿using CZToolKit.Core;
 using CZToolKit.Core.Blackboards;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
@@ -30,7 +31,7 @@ namespace CZToolKit.TimelineLite
         int currentFrame;
         float currentTime;
         PlayStatus playStatus = PlayStatus.Stopped;
-        Blackboard blackboard = new Blackboard();
+        Dictionary<string, ICZType> blackboard = new Dictionary<string, ICZType>();
 
         public PlayableEvent onFinishedCallback = new PlayableEvent();
 
@@ -89,7 +90,7 @@ namespace CZToolKit.TimelineLite
         public bool IsPlayingForward { get { return isPlayingForward; } }
 
         /// <summary> 黑板数据 </summary>
-        public Blackboard Blackboard => blackboard;
+        public Dictionary<string,ICZType> Blackboard => blackboard;
 
         protected virtual void Awake()
         {
