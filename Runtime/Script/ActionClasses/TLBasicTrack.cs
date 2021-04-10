@@ -124,8 +124,8 @@ namespace CZToolKit.TimelineLite
                 }
                 else if (_frame >= clip.Start && _frame <= clip.End)
                 {
-                    //if (clip.HasFinished && Playable.FrameChanged)
-                    //    clip.ActionStop();
+                    if (clip.HasFinished && Playable.FrameChanged)
+                        clip.ActionStop();
 
                     if (!clip.HasFinished)
                     {
