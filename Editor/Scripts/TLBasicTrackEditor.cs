@@ -1,4 +1,5 @@
-﻿using CZToolKit.Core;
+﻿#if UNITY_2019_1_OR_NEWER
+using CZToolKit.Core;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -19,3 +20,4 @@ namespace CZToolKit.TimelineLite.Editors
         }
     }
 }
+#endif
