@@ -13,12 +13,14 @@ namespace CZToolKit.TimelineLite.Editors
 #if ODIN_INSPECTOR
         PropertyTree propertyTree;
 #endif
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
 #if ODIN_INSPECTOR
             propertyTree = PropertyTree.Create(target);
             propertyTree.DrawMonoScriptObjectField = true;
 #endif
+            if (target is ITLBasicTrackAssetEditorEnter enter)
+                enter.Enter();
         }
 
         public override void OnInspectorGUI()

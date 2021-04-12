@@ -1,9 +1,10 @@
 ﻿using System;
 
-namespace CZToolKit.TimelineLite
+namespace CZToolKit.TimelineLite.Editors
 {
     /// <summary> menuitem </summary>
-    public class TLTrackAssetMenuItemAttribute : Attribute 
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    public class TLTrackAssetMenuItemAttribute : Attribute
     {
         public string defaultTrackName;
 

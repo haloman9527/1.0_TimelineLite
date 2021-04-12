@@ -1,4 +1,4 @@
-﻿ using CZToolKit.Core;
+﻿using CZToolKit.Core;
 using CZToolKit.TimelineLite.Editors;
 using System;
 using UnityEditor;
@@ -8,7 +8,7 @@ using UnityEngine.Timeline;
 namespace CZToolKit.TimelineLite.Example
 {
     [Serializable]
-    public class TweenPositionTLClipAsset : TLBasicClipAsset<TweenPositionTLActionData>
+    public class TweenPositionTLClipAsset : TLBasicClipAsset<TweenPositionTLActionData>, ISceneGUI
     {
         public Vector3 from;
         public Vector3 to;
@@ -25,12 +25,11 @@ namespace CZToolKit.TimelineLite.Example
             return actionData;
         }
 
-        protected override void OnSceneGUISelected(PlayableDirectorLite _playable, TimelineClip _timelineClip)
+        public void SceneGUISelected(PlayableDirectorLite _playable, TimelineClip _timelineClip, int _indicator)
         {
             float startFrame = _timelineClip.GetStartFrame();
             float endFrame = _timelineClip.GetEndFrame();
-            int indicator = TimelineLiteEditorWindow.Instance.IndicatorFrame;
-            float progress = (indicator - startFrame) / (endFrame - startFrame);
+            float progress = (_indicator - startFrame) / (endFrame - startFrame);
             if (progress < 0 || progress > 1) return;
 
             Vector3 position = new Vector3(
@@ -39,6 +38,11 @@ namespace CZToolKit.TimelineLite.Example
                 Easing.Tween(from.z, to.z, progress, ease)
                 );
             Handles.DotHandleCap(0, position, Quaternion.identity, 0.1f, EventType.Repaint);
+        }
+
+        public void SceneGUI(PlayableDirectorLite _playable, TimelineClip _timelineClip, int _indicator)
+        {
+
         }
     }
 }

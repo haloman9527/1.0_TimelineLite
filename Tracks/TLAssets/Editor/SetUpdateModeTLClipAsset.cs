@@ -1,10 +1,8 @@
 ﻿// 请将此脚本放在Editor目录下
 using CZToolKit.Core;
 using System;
-using UnityEngine;
-using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite
+namespace CZToolKit.TimelineLite.Editors
 {
     [Serializable]
     public class SetUpdateModeTLClipAsset : TLBasicClipAsset<SetUpdateModeTLActionData>
@@ -18,16 +16,6 @@ namespace CZToolKit.TimelineLite
             actionData.updateMode = updateMode;
 
             return actionData;
-        }
-
-        protected override void OnDrawGizmos_Lite(PlayableDirectorLite _playable, TimelineClip _timelineClip)
-        {
-
-        }
-
-        protected override void OnDrawGizmosSelected_Lite(PlayableDirectorLite _playable, TimelineClip _timelineClip)
-        {
-
         }
     }
 }

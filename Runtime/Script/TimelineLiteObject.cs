@@ -3,7 +3,6 @@ using CZToolKit.Core.Blackboards;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using UnityEngine;
 
 namespace CZToolKit.TimelineLite
 {
@@ -18,6 +17,8 @@ namespace CZToolKit.TimelineLite
 
         /// <summary> 持续时间 </summary>
         float Duration { get; }
+
+        Dictionary<string, ICZType> Blackboard { get; }
 
         List<ITLTrack> Tracks { get; }
 
@@ -104,10 +105,9 @@ namespace CZToolKit.TimelineLite
         }
         #endregion
 
-        bool initialized = false;
         T timelineData;
+        bool initialized = false;
         Dictionary<string, ICZType> blackboard = new Dictionary<string, ICZType>();
-        [SerializeField]
         List<ITLTrack> tracks = new List<ITLTrack>();
 
         public bool Initialized { get { return initialized; } }

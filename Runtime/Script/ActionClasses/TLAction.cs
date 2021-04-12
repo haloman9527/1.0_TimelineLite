@@ -47,8 +47,6 @@ namespace CZToolKit.TimelineLite
     /// <typeparam name="T"> 数据类 </typeparam>
     public abstract class TLAction<T> : ITLAction where T : TLActionData, new()
     {
-        //T actionData;
-
         public T TActionData { get; set; }
         public TLActionData ActionData { get { return TActionData; } }
 

@@ -1,9 +1,7 @@
-﻿// 请将此脚本放在Editor目录下
-using System;
-using UnityEngine;
+﻿using System;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite
+namespace CZToolKit.TimelineLite.Editors
 {
     [Serializable]
     [TrackColor(0.84f, 1.00f, 0.00f)]

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-namespace CZToolKit.TimelineLite
+namespace CZToolKit.TimelineLite.Editors
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class TLTrackMinHeightAttribute : Attribute

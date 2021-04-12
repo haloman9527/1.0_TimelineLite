@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite
+namespace CZToolKit.TimelineLite.Editors
 {
     [CreateAssetMenu(menuName = "CZToolKit/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset

@@ -8,7 +8,7 @@ using UnityEngine.Timeline;
 namespace CZToolKit.TimelineLite.Example
 {
     [Serializable]
-    public class TweenRotationTLClipAsset : TLBasicClipAsset<TweenRotationTLActionData>
+    public class TweenRotationTLClipAsset : TLBasicClipAsset<TweenRotationTLActionData>, ISceneGUI
     {
         public Vector3 from, to;
         public EasingType ease = EasingType.Linear;
@@ -25,7 +25,12 @@ namespace CZToolKit.TimelineLite.Example
             return actionData;
         }
 
-        protected override void OnSceneGUISelected(PlayableDirectorLite _playable, TimelineClip _timelineClip)
+        public void SceneGUI(PlayableDirectorLite _playable, TimelineClip _timelineClip, int _indicator)
+        {
+
+        }
+
+        public void SceneGUISelected(PlayableDirectorLite _playable, TimelineClip _timelineClip,int _indicator)
         {
             float startFrame = _timelineClip.GetStartFrame();
             float endFrame = _timelineClip.GetEndFrame();

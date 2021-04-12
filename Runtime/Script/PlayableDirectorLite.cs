@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Playables;
 
 namespace CZToolKit.TimelineLite
 {
@@ -90,7 +89,7 @@ namespace CZToolKit.TimelineLite
         public bool IsPlayingForward { get { return isPlayingForward; } }
 
         /// <summary> 黑板数据 </summary>
-        public Dictionary<string,ICZType> Blackboard => blackboard;
+        public Dictionary<string, ICZType> Blackboard { get { return blackboard; } }
 
         protected virtual void Awake()
         {
@@ -249,14 +248,5 @@ namespace CZToolKit.TimelineLite
                 timeline.Stop();
         }
         #endregion
-
-#if UNITY_EDITOR
-        public UnityAction onDrawGizmos;
-        protected virtual void OnDrawGizmos()
-        {
-            if (onDrawGizmos != null)
-                onDrawGizmos();
-        }
-#endif
     }
 }

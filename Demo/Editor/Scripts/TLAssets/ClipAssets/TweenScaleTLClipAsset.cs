@@ -1,4 +1,5 @@
 ﻿using CZToolKit.Core;
+using CZToolKit.TimelineLite.Editors;
 using System;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -19,18 +20,8 @@ namespace CZToolKit.TimelineLite.Example
             actionData.from = from;
             actionData.to = to;
             actionData.ease = ease;
-            
+
             return actionData;
-        }
-
-        protected override void OnDrawGizmos_Lite(PlayableDirectorLite _playable, TimelineClip _timelineClip)
-        {
-
-        }
-
-        protected override void OnDrawGizmosSelected_Lite(PlayableDirectorLite _playable, TimelineClip _timelineClip)
-        {
-
         }
     }
 }

@@ -116,17 +116,17 @@ namespace CZToolKit.TimelineLite.Editors
 
             rect.x = args.rowRect.width - 25;
             rect.width = 25;
-            if (!EditorApplication.isPlaying || Window.Playable == null)
+            if (!EditorApplication.isPlaying || TimelineLiteEditorWindow.Playable == null)
                 EditorGUI.BeginDisabledGroup(true);
 
             if (GUI.Button(rect, playIcon, (GUIStyle)"toolbarbutton"))
             {
-                Window.Playable.Play(
+                TimelineLiteEditorWindow.Playable.Play(
                     Activator.CreateInstance(asset.TargetObjectType, asset.Extract()) as ITimelineLiteObject);
                 Repaint();
             }
 
-            if (!EditorApplication.isPlaying || Window.Playable == null)
+            if (!EditorApplication.isPlaying || TimelineLiteEditorWindow.Playable == null)
                 EditorGUI.EndDisabledGroup();
         }
 

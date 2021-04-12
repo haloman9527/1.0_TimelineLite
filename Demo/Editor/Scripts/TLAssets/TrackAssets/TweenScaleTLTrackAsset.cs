@@ -1,6 +1,6 @@
 ﻿using CZToolKit.TimelineLite;
+using CZToolKit.TimelineLite.Editors;
 using System;
-using UnityEngine;
 using UnityEngine.Timeline;
 
 namespace CZToolKit.TimelineLite.Example

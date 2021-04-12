@@ -23,10 +23,9 @@ namespace CZToolKit.TimelineLite.Example.Editors
         {
             GUILayout.BeginHorizontal();
             EditorGUILayout.PropertyField(arg0);
-            if (TimelineLiteEditorWindow.Instance != null &&
-                TimelineLiteEditorWindow.Instance.Playable != null &&
+            if (TimelineLiteEditorWindow.Playable != null &&
                 GUILayout.Button("Set", GUILayout.Width(50)))
-                arg0.vector3Value = TimelineLiteEditorWindow.Instance.Playable.transform.position;
+                arg0.vector3Value = TimelineLiteEditorWindow.Playable.transform.position;
             GUILayout.EndHorizontal();
         }
     }
