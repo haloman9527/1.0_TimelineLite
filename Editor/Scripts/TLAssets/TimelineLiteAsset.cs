@@ -1,5 +1,6 @@
 ﻿using CZToolKit.Core.Attributes;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -8,6 +9,8 @@ namespace CZToolKit.TimelineLite.Editors
     [CreateAssetMenu(menuName = "CZToolKit/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset
     {
+        static Dictionary<Type, Func<TrackAsset, TLTrackData>> CustomGetTrackData = new Dictionary<Type, Func<TrackAsset, TLTrackData>>();
+
         [TextArea(minLines: 3, maxLines: 7)]
         public string Description = "";
 
@@ -42,7 +45,7 @@ namespace CZToolKit.TimelineLite.Editors
 
         protected virtual void ExtractPostProcess(TimelineLiteObjectData _data) { }
 
-        private TLTrackData GetTrack(TrackAsset trackAsset)
+        private static TLTrackData GetTrack(TrackAsset trackAsset)
         {
             Type trackAssetType = trackAsset.GetType();
             if (trackAssetType == typeof(GroupTrack))
@@ -94,12 +97,7 @@ namespace CZToolKit.TimelineLite.Editors
 
                 return basicTrackData;
             }
-            else
-            {
-                return CustomCreateTrackData(trackAsset);
-            }
+            return null;
         }
-
-        protected virtual TLTrackData CustomCreateTrackData(TrackAsset trackAsset) { return null; }
     }
 }
