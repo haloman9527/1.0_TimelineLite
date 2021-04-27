@@ -12,6 +12,7 @@ namespace CZToolKit.TimelineLite
 #if UNITY_2019_1_OR_NEWER
         [SerializeReference]
 #endif
+
         private List<TLTrackData> childTracks = new List<TLTrackData>();
 
         public List<TLTrackData> ChildTracks { get { return childTracks; } }
