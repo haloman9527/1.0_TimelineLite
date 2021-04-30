@@ -8,6 +8,6 @@ namespace CZToolKit.TimelineLite
     [Serializable]
     public class SetUpdateModeTLActionData : TLActionData
     {
-        public PlayableUpdateMode updateMode;
+        public UpdateMode updateMode;
     }
 }

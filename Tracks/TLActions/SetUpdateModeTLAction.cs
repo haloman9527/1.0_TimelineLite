@@ -7,7 +7,7 @@ namespace CZToolKit.TimelineLite
     [Serializable]
     public class SetUpdateModeTLAction : TLAction<SetUpdateModeTLActionData>
     {
-        PlayableUpdateMode updateMode;
+        UpdateMode updateMode;
 
         /// <summary> 不能删 </summary>
         public SetUpdateModeTLAction() { }

@@ -13,7 +13,7 @@ namespace CZToolKit.TimelineLite.Editors
         {
             TrackDrawOptions options = base.GetTrackOptions(track, binding);
 
-            if (AttributeCache.TryGetTypeAttribute(track.GetType(), out TLTrackMinHeightAttribute attribute))
+            if (Utility.TryGetTypeAttribute(track.GetType(), out TLTrackMinHeightAttribute attribute))
                 options.minimumHeight = attribute.MinHeight;
 
             return options;

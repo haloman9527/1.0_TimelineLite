@@ -7,7 +7,7 @@ namespace CZToolKit.TimelineLite.Editors
     [Serializable]
     public class SetUpdateModeTLClipAsset : TLBasicClipAsset<SetUpdateModeTLActionData>
     {
-        public PlayableUpdateMode updateMode;
+        public UpdateMode updateMode;
         /// <summary> 创建<see cref="SetUpdateModeTLActionData" />对象 </summary>
         public override TLActionData CreateActionData()
         {

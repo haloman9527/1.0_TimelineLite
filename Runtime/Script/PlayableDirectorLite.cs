@@ -22,7 +22,7 @@ namespace CZToolKit.TimelineLite
 
         ITimelineLiteObject timeline;
 
-        [SerializeField] PlayableUpdateMode updateMode;
+        [SerializeField] UpdateMode updateMode;
         [SerializeField] float speed = DEFAULT_SPEED;
         bool isPlayingForward;
 
@@ -36,7 +36,7 @@ namespace CZToolKit.TimelineLite
 
         public ITimelineLiteObject Timeline { get { return timeline; } protected set { timeline = value; } }
 
-        public PlayableUpdateMode UpdateMode { get { return updateMode; } set { updateMode = value; } }
+        public UpdateMode UpdateMode { get { return updateMode; } set { updateMode = value; } }
 
         /// <summary> 播放速度 </summary>
         public virtual float Speed
@@ -100,16 +100,16 @@ namespace CZToolKit.TimelineLite
 
         protected virtual void Update()
         {
-            if ((updateMode != PlayableUpdateMode.Normal && updateMode != PlayableUpdateMode.UnscaledTime) || !IsPlaying)
+            if ((updateMode != UpdateMode.Normal && updateMode != UpdateMode.UnscaledTime) || !IsPlaying)
                 return;
-            float delta = updateMode == PlayableUpdateMode.Normal ? Time.deltaTime : Time.unscaledDeltaTime;
+            float delta = updateMode == UpdateMode.Normal ? Time.deltaTime : Time.unscaledDeltaTime;
             if (delta != 0)
                 InternalUpdate(delta);
         }
 
         protected virtual void FixedUpdate()
         {
-            if (updateMode != PlayableUpdateMode.AnimatePhysics || !IsPlaying)
+            if (updateMode != UpdateMode.AnimatePhysics || !IsPlaying)
                 return;
 
             float delta = Time.fixedDeltaTime;
@@ -119,7 +119,7 @@ namespace CZToolKit.TimelineLite
 
         public void Evaluate(float _delta)
         {
-            if (updateMode != PlayableUpdateMode.Manual || !IsPlaying)
+            if (updateMode != UpdateMode.Manual || !IsPlaying)
                 return;
             if (_delta != 0)
                 InternalUpdate(_delta);
