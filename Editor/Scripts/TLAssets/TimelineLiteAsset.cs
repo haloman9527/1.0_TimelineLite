@@ -82,7 +82,7 @@ namespace CZToolKit.TimelineLite.Editors
 
                     ActionBaseInfo actionBaseInfo = new ActionBaseInfo();
                     actionBaseInfo.name = clip.displayName;
-                    actionBaseInfo.triggerOnSkip = clipAsset.TriggerOnSkip;
+                    //actionBaseInfo.triggerOnSkip = clipAsset.TriggerOnSkip;
                     actionBaseInfo.start = (int)clip.GetStartFrame();
                     actionBaseInfo.end = (int)clip.GetEndFrame();
                     actionBaseInfo.frameCount = (int)clip.GetFrameCount();

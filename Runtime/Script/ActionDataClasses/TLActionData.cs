@@ -9,7 +9,6 @@ namespace CZToolKit.TimelineLite
     public struct ActionBaseInfo
     {
         public string name;
-        public bool triggerOnSkip;
         public int start;
         public int frameCount;
         public int end;
@@ -24,6 +23,8 @@ namespace CZToolKit.TimelineLite
     {
         [SerializeField, HideInInspector]
         ActionBaseInfo actionBaseInfo;
+
+        public bool triggerOnSkip = true;
         public ActionBaseInfo ActionBaseInfo { get { return actionBaseInfo; } set { actionBaseInfo = value; } }
     }
 }

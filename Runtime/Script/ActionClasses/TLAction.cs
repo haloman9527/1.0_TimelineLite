@@ -52,7 +52,7 @@ namespace CZToolKit.TimelineLite
 
         public string Name { get { return ActionData.ActionBaseInfo.name; } }
 
-        public bool TriggerOnSkip { get { return ActionData.ActionBaseInfo.triggerOnSkip; } }
+        public bool TriggerOnSkip { get { return ActionData.triggerOnSkip; } }
 
         public int Start { get { return ActionData.ActionBaseInfo.start; } }
 
