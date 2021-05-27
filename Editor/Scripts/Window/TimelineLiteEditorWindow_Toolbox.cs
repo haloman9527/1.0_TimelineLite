@@ -100,8 +100,7 @@ namespace CZToolKit.TimelineLite.Editors
 
                 if (GUI.Button(rect, pingIcon))
                 {
-                    Assembly unityEditorAssembly = Assembly.Load("UnityEditor");
-                    Type type = new List<Type>(unityEditorAssembly.GetTypes()).Find(_type => _type.Name == "ProjectBrowser");
+                    Type type = Utility.GetType("UnityEditor.ProjectBrowser", "UnityEditor");
                     EditorWindow window = GetWindow(type);
                     EditorGUIUtility.PingObject(timelineLiteAsset);
                 }
