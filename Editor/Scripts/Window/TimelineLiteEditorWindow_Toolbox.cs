@@ -60,7 +60,7 @@ namespace CZToolKit.TimelineLite.Editors
             foreach (Type trackType in TypeCache.GetTypesDerivedFrom(TimelineLiteTrackAssetType))
             {
                 TLTrackAssetMenuItemAttribute attrib;
-                if (Utility.TryGetTypeAttribute(trackType, out attrib))
+                if (Utility_Attribute.TryGetTypeAttribute(trackType, out attrib))
                 {
                     if (!string.IsNullOrEmpty(attrib.defaultTrackName))
                         menu.Add(new KeyValuePair<string, Type>(attrib.defaultTrackName, trackType));
@@ -100,7 +100,7 @@ namespace CZToolKit.TimelineLite.Editors
 
                 if (GUI.Button(rect, pingIcon))
                 {
-                    Type type = Utility.GetType("UnityEditor.ProjectBrowser", "UnityEditor");
+                    Type type = Utility_Refelection.GetType("UnityEditor.ProjectBrowser", "UnityEditor");
                     EditorWindow window = GetWindow(type);
                     EditorGUIUtility.PingObject(timelineLiteAsset);
                 }

@@ -18,7 +18,7 @@ namespace CZToolKit.TimelineLite.Editors
         {
             ClipDrawOptions options = base.GetClipOptions(clip);
 
-            if (Utility.TryGetTypeAttribute(clip.asset.GetType(), out TLClipTooltipAttribute attribute))
+            if (Utility_Attribute.TryGetTypeAttribute(clip.asset.GetType(), out TLClipTooltipAttribute attribute))
                 options.tooltip = attribute.Tooltip;
 
             return options;

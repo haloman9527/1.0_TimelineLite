@@ -60,9 +60,9 @@ namespace CZToolKit.TimelineLite
         static TimelineLiteObject()
         {
             ActionDataDict = new Dictionary<Type, Type>();
-            foreach (var actionType in Utility.GetChildrenTypes<ITLAction>())
+            foreach (var actionType in Utility_Refelection.GetChildrenTypes<ITLAction>())
             {
-
+                if (actionType.IsGenericType || actionType.IsAbstract) continue;
                 Type actionDataType = actionType.GetProperty("TActionData",
                     BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public).PropertyType;
                 ActionDataDict[actionDataType] = actionType;
