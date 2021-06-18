@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 34331458}
   - component: {fileID: 34331457}
   - component: {fileID: 34331462}
+  - component: {fileID: 34331461}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -219,6 +220,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34331456}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!320 &34331461
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34331456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 0}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!114 &34331462
 MonoBehaviour:
   m_ObjectHideFlags: 0

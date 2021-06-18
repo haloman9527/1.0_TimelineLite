@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Playables;
 
 namespace CZToolKit.TimelineLite
 {
@@ -35,10 +37,12 @@ namespace CZToolKit.TimelineLite
     /// <typeparam name="T">轨道数据提供类</typeparam>
     public abstract class TLTrack<T> : ITLTrack where T : TLTrackData
     {
+        #region 字段
         [SerializeField]
         T trackData = null;
         PlayableDirectorLite playable = null;
         ITimelineLiteObject timelineLiteObject = null;
+        #endregion
 
         #region 属性
         public T TTrackData { get { return trackData; } }
@@ -57,6 +61,8 @@ namespace CZToolKit.TimelineLite
         }
         public ITimelineLiteObject TimelineLiteObject { get { return timelineLiteObject; } }
         public PlayableDirectorLite Playable { get { return playable; } }
+
+        public double duration => throw new System.NotImplementedException();
 
         #endregion
 
@@ -81,7 +87,6 @@ namespace CZToolKit.TimelineLite
         public virtual void SpeedChanged(float _speed) { }
 
         public abstract int GetFrameCount();
-
         #endregion
     }
 }

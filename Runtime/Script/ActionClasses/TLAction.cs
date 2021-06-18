@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine.Playables;
+
 namespace CZToolKit.TimelineLite
 {
     public interface ITLAction
@@ -45,7 +47,7 @@ namespace CZToolKit.TimelineLite
 
     /// <summary> 运行时逻辑基类</summary>
     /// <typeparam name="T"> 数据类 </typeparam>
-    public abstract class TLAction<T> : ITLAction where T : TLActionData, new()
+    public abstract class TLAction<T> : ITLAction, IPlayableBehaviour where T : TLActionData, new()
     {
         public T TActionData { get; set; }
         public TLActionData ActionData { get { return TActionData; } }
@@ -178,5 +180,45 @@ namespace CZToolKit.TimelineLite
         /// <summary> 播放速度被修改时触发 </summary>
         /// <param name="_speed"></param>
         protected virtual void OnSpeedChanged(float _speed) { }
+
+        public void OnGraphStart(Playable playable)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnGraphStop(Playable playable)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnPlayableCreate(Playable playable)
+        {
+
+        }
+
+        public void OnPlayableDestroy(Playable playable)
+        {
+
+        }
+
+        public void OnBehaviourPlay(Playable playable, FrameData info)
+        {
+
+        }
+
+        public void OnBehaviourPause(Playable playable, FrameData info)
+        {
+
+        }
+
+        public void PrepareFrame(Playable playable, FrameData info)
+        {
+
+        }
+
+        public void ProcessFrame(Playable playable, FrameData info, object playerData)
+        {
+
+        }
     }
 }

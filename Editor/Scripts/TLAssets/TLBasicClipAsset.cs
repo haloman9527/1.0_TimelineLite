@@ -16,10 +16,9 @@ namespace CZToolKit.TimelineLite.Editors
     {
         [SerializeField] bool triggerOnSkip = true;
 
-        private PlayableGraph graph;
 
         public override bool TriggerOnSkip { get { return triggerOnSkip; } }
 
-        public override Playable CreatePlayable(PlayableGraph graph, GameObject go) { this.graph = graph; return ScriptPlayable<T>.Create(graph, new T()); }
+        public override Playable CreatePlayable(PlayableGraph graph, GameObject go) { return ScriptPlayable<T>.Create(graph, new T()); }
     }
 }
