@@ -1,4 +1,19 @@
-﻿// 请将此脚本放在Editor目录下
+#region 注 释
+/***
+ *
+ *  Title:
+ *  
+ *  Description:
+ *  
+ *  Date:
+ *  Version:
+ *  Writer: 半只龙虾人
+ *  Github: https://github.com/HalfLobsterMan
+ *  Blog: https://www.crosshair.top/
+ *
+ */
+#endregion
+// 请将此脚本放在Editor目录下
 using CZToolKit.TimelineLite.Editors;
 using System;
 using UnityEngine.Timeline;

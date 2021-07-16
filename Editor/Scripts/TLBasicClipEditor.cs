@@ -1,4 +1,19 @@
-﻿#if UNITY_2019_1_OR_NEWER
+#region 注 释
+/***
+ *
+ *  Title:
+ *  
+ *  Description:
+ *  
+ *  Date:
+ *  Version:
+ *  Writer: 半只龙虾人
+ *  Github: https://github.com/HalfLobsterMan
+ *  Blog: https://www.crosshair.top/
+ *
+ */
+#endregion
+#if UNITY_2019_1_OR_NEWER
 using CZToolKit.Core;
 using UnityEditor.Timeline;
 using UnityEngine;
