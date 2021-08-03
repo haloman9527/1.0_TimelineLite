@@ -13,6 +13,7 @@
  *
  */
 #endregion
+using UnityEditor;
 using UnityEditor.Timeline;
 
 namespace CZToolKit.TimelineLite.Editors
