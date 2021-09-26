@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abd4ee768a8624b4cab5b0d8b31a298e, type: 3}
-  m_Name: "\u63D2\u503C\u4F4D\u79FB"
+  m_Name: "\u4F4D\u79FB"
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c545402cd9bb314ebf93b2fc5a137b1, type: 3}
-  m_Name: "\u63D2\u503C\u65CB\u8F6C"
+  m_Name: "\u65CB\u8F6C"
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}

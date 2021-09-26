@@ -23,6 +23,7 @@ using UnityEngine.Timeline;
 namespace CZToolKit.TimelineLite.Example
 {
     [Serializable]
+    [HideInMenu]
     public class TweenPositionTLClipAsset : TLBasicClipAsset<TweenPositionTLActionData>, ISceneGUI
     {
         public Vector3 from;
