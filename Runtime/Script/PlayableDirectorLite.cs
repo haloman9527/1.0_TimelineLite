@@ -14,9 +14,9 @@
  */
 #endregion
 using CZToolKit.Core;
-using CZToolKit.Core.Blackboards;
 using System;
 using System.Collections.Generic;
+using CZToolKit.GraphProcessor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -45,7 +45,7 @@ namespace CZToolKit.TimelineLite
         int currentFrame;
         float currentTime;
         PlayStatus playStatus = PlayStatus.Stopped;
-        Dictionary<string, ICZType> blackboard = new Dictionary<string, ICZType>();
+        Blackboard blackboard = new Blackboard();
 
         public PlayableEvent onFinishedCallback = new PlayableEvent();
 
@@ -102,9 +102,6 @@ namespace CZToolKit.TimelineLite
         public bool FrameChanged { get { return lastFrame != currentFrame; } }
 
         public bool IsPlayingForward { get { return isPlayingForward; } }
-
-        /// <summary> 黑板数据 </summary>
-        public Dictionary<string, ICZType> Blackboard { get { return blackboard; } }
 
         protected virtual void Awake()
         {

@@ -14,7 +14,6 @@
  */
 #endregion
 using CZToolKit.Core;
-using CZToolKit.Core.Blackboards;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -32,8 +31,6 @@ namespace CZToolKit.TimelineLite
 
         /// <summary> 持续时间 </summary>
         float Duration { get; }
-
-        Dictionary<string, ICZType> Blackboard { get; }
 
         List<ITLTrack> Tracks { get; }
 
@@ -122,14 +119,11 @@ namespace CZToolKit.TimelineLite
 
         T timelineData;
         bool initialized = false;
-        Dictionary<string, ICZType> blackboard = new Dictionary<string, ICZType>();
         List<ITLTrack> tracks = new List<ITLTrack>();
 
         public bool Initialized { get { return initialized; } }
 
         public bool Loop { get { return timelineData.Loop; } }
-
-        public Dictionary<string, ICZType> Blackboard { get { return blackboard; } }
 
         public T TTimelineData { get { return timelineData; } }
 
@@ -234,7 +228,6 @@ namespace CZToolKit.TimelineLite
         /// <summary> 重置 </summary>
         public void Reset()
         {
-            blackboard.Clear();
             for (int i = 0; i != tracks.Count; ++i)
             {
                 tracks[i].Reset();
