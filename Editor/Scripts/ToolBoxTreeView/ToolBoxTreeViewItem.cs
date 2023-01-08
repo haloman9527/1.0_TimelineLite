@@ -13,7 +13,7 @@
  *
  */
 #endregion
-using CZToolKit.Core.Editors;
+using CZToolKit.Common.Editors;
 using System;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;

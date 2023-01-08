@@ -13,7 +13,7 @@
  *
  */
 #endregion
-using CZToolKit.Core.Editors;
+using CZToolKit.Common.Editors;
 using CZToolKit.TimelineLite.Editors;
 using System;
 using System.Collections;
