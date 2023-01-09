@@ -14,9 +14,8 @@
  */
 #endregion
 using CZToolKit.Common;
+using CZToolKit.Common.Blackboard;
 using System;
-using System.Collections.Generic;
-using CZToolKit.GraphProcessor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -45,7 +44,7 @@ namespace CZToolKit.TimelineLite
         int currentFrame;
         float currentTime;
         PlayStatus playStatus = PlayStatus.Stopped;
-        Blackboard blackboard = new Blackboard();
+        Blackboard<string> blackboard = new Blackboard<string>();
 
         public PlayableEvent onFinishedCallback = new PlayableEvent();
 
