@@ -13,11 +13,8 @@
  *
  */
 #endregion
-using CZToolKit.Common.Editors;
+using CZToolKit.Common.IMGUI;
 using CZToolKit.TimelineLite.Editors;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 

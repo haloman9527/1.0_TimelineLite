@@ -14,7 +14,7 @@
  */
 #endregion
 using CZToolKit.Common;
-using CZToolKit.Common.Editors;
+using CZToolKit.Common.IMGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
