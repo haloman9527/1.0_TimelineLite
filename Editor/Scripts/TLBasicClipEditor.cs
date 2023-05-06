@@ -15,6 +15,7 @@
 #endregion
 #if UNITY_2019_1_OR_NEWER
 using CZToolKit.Common;
+using Sirenix.Utilities;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -33,8 +34,9 @@ namespace CZToolKit.TimelineLite.Editors
         {
             ClipDrawOptions options = base.GetClipOptions(clip);
 
-            if (Util_Attribute.TryGetTypeAttribute(clip.asset.GetType(), out TLClipTooltipAttribute attribute))
-                options.tooltip = attribute.Tooltip;
+            var attr = clip.asset.GetType().GetCustomAttribute<TLClipTooltipAttribute>(true);
+            if (attr != null)
+                options.tooltip = attr.Tooltip;
 
             return options;
         }

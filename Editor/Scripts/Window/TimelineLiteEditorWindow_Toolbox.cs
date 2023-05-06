@@ -74,8 +74,8 @@ namespace CZToolKit.TimelineLite.Editors
             List<KeyValuePair<string, Type>> menu = new List<KeyValuePair<string, Type>>();
             foreach (Type trackType in TypeCache.GetTypesDerivedFrom(TimelineLiteTrackAssetType))
             {
-                TLTrackAssetMenuItemAttribute attrib;
-                if (Util_Attribute.TryGetTypeAttribute(trackType, out attrib))
+                var attrib = trackType.GetCustomAttribute<TLTrackAssetMenuItemAttribute>(true);
+                if (attrib != null)
                 {
                     if (!string.IsNullOrEmpty(attrib.defaultTrackName))
                         menu.Add(new KeyValuePair<string, Type>(attrib.defaultTrackName, trackType));

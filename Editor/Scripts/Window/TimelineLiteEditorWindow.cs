@@ -26,7 +26,7 @@ namespace CZToolKit.TimelineLite.Editors
     public enum SearchMode { StartsWith, Contains, EndsWith }
 
     [Serializable]
-    public partial class TimelineLiteEditorWindow : BasicEditorWindow
+    public partial class TimelineLiteEditorWindow : BaseEditorWindow
     {
         #region 常量
         public const float ToolbarHeight = 50;

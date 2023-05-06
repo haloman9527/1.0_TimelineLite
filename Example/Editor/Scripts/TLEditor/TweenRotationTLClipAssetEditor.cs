@@ -22,23 +22,29 @@ namespace CZToolKit.TimelineLite.Example.Editors
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(TweenRotationTLClipAsset))]
-    public class TweenRotationTLClipAssetEditor : BasicEditor
+    public class TweenRotationTLClipAssetEditor : BaseEditor
     {
-        protected override void RegisterDrawers()
+        protected override void OnPropertyGUI(SerializedProperty property)
         {
-            base.RegisterDrawers();
-            RegisterDrawer("from", Draw);
-            RegisterDrawer("to", Draw);
-        }
-
-        private void Draw(SerializedProperty arg0)
-        {
-            GUILayout.BeginHorizontal();
-            EditorGUILayout.PropertyField(arg0);
-            if (TimelineLiteEditorWindow.Playable != null &&
-                GUILayout.Button("Set", GUILayout.Width(50)))
-                arg0.vector3Value = TimelineLiteEditorWindow.Playable.transform.rotation.eulerAngles;
-            GUILayout.EndHorizontal();
+            switch (property.propertyPath)
+            {
+                case "from":
+                case "to":
+                {
+                    GUILayout.BeginHorizontal();
+                    EditorGUILayout.PropertyField(property);
+                    if (TimelineLiteEditorWindow.Playable != null &&
+                        GUILayout.Button("Set", GUILayout.Width(50)))
+                        property.vector3Value = TimelineLiteEditorWindow.Playable.transform.rotation.eulerAngles;
+                    GUILayout.EndHorizontal();
+                    break;
+                }
+                default:
+                {
+                    base.OnPropertyGUI(property);
+                    break;
+                }
+            }
         }
     }
 }

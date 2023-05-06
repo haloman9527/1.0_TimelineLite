@@ -1,4 +1,5 @@
 #region 注 释
+
 /***
  *
  *  Title:
@@ -12,7 +13,9 @@
  *  Blog: https://www.crosshair.top/
  *
  */
+
 #endregion
+
 using CZToolKit.Common.IMGUI;
 using CZToolKit.TimelineLite.Editors;
 using UnityEditor;
@@ -22,23 +25,28 @@ namespace CZToolKit.TimelineLite.Example.Editors
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(TweenPositionTLClipAsset))]
-    public class TweenPositionTLClipAssetEditor : BasicEditor
+    public class TweenPositionTLClipAssetEditor : BaseEditor
     {
-        protected override void RegisterDrawers()
+        protected override void OnPropertyGUI(SerializedProperty property)
         {
-            base.RegisterDrawers();
-            RegisterDrawer("from", Draw);
-            RegisterDrawer("to", Draw);
-        }
-
-        private void Draw(SerializedProperty arg0)
-        {
-            GUILayout.BeginHorizontal();
-            EditorGUILayout.PropertyField(arg0);
-            if (TimelineLiteEditorWindow.Playable != null &&
-                GUILayout.Button("Set", GUILayout.Width(50)))
-                arg0.vector3Value = TimelineLiteEditorWindow.Playable.transform.position;
-            GUILayout.EndHorizontal();
+            switch (property.propertyPath)
+            {
+                case "from":
+                case "to":
+                {
+                    GUILayout.BeginHorizontal();
+                    EditorGUILayout.PropertyField(property);
+                    if (TimelineLiteEditorWindow.Playable != null && GUILayout.Button("Set", GUILayout.Width(50)))
+                        property.vector3Value = TimelineLiteEditorWindow.Playable.transform.position;
+                    GUILayout.EndHorizontal();
+                    break;
+                }
+                default:
+                {
+                    base.OnPropertyGUI(property);
+                    break;
+                }
+            }
         }
     }
 }

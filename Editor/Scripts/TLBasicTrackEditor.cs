@@ -14,7 +14,7 @@
  */
 #endregion
 #if UNITY_2019_1_OR_NEWER
-using CZToolKit.Common;
+using System.Reflection;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -28,8 +28,9 @@ namespace CZToolKit.TimelineLite.Editors
         {
             TrackDrawOptions options = base.GetTrackOptions(track, binding);
 
-            if (Util_Attribute.TryGetTypeAttribute(track.GetType(), out TLTrackMinHeightAttribute attribute))
-                options.minimumHeight = attribute.MinHeight;
+            var attr = track.GetType().GetCustomAttribute<TLTrackMinHeightAttribute>(true);
+            if (attr != null)
+                options.minimumHeight = attr.MinHeight;
 
             return options;
         }
