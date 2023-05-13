@@ -13,7 +13,7 @@
  *
  */
 #endregion
-using CZToolKit.Common;
+using CZToolKit.Common.Easing;
 using UnityEngine;
 
 namespace CZToolKit.TimelineLite.Example
