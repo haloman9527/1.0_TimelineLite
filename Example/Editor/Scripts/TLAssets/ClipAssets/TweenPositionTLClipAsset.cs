@@ -14,7 +14,6 @@
  */
 #endregion
 
-using CZToolKit.Common.Easing;
 using CZToolKit.TimelineLite.Editors;
 using System;
 using UnityEditor;

@@ -15,7 +15,7 @@
 #endregion
 using UnityEditor;
 using UnityEngine;
-using CZToolKit.Common.IMGUI;
+using CZToolKitEditor;
 
 namespace CZToolKit.TimelineLite.Editors
 {

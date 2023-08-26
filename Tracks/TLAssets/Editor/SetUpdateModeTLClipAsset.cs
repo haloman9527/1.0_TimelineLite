@@ -14,7 +14,7 @@
  */
 #endregion
 // 请将此脚本放在Editor目录下
-using CZToolKit.Common;
+using CZToolKit;
 using System;
 
 namespace CZToolKit.TimelineLite.Editors

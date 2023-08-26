@@ -13,8 +13,8 @@
  *
  */
 #endregion
-using CZToolKit.Common;
-using CZToolKit.Common.Blackboard;
+using CZToolKit;
+using CZToolKit.Blackboard;
 using System;
 using UnityEngine;
 using UnityEngine.Events;

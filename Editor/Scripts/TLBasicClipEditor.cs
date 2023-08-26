@@ -14,7 +14,7 @@
  */
 #endregion
 #if UNITY_2019_1_OR_NEWER
-using CZToolKit.Common;
+using CZToolKit;
 using Sirenix.Utilities;
 using UnityEditor.Timeline;
 using UnityEngine;
