@@ -64,58 +64,7 @@ namespace CZToolKit.TimelineLite
 
     public class TimelineLiteObject<T> : ITimelineLiteObject where T : TimelineLiteObjectData, new()
     {
-        #region 静态变量
-        protected static Dictionary<Type, Type> ActionDataDict;
-        #endregion
-
-        #region 静态方法
-        static TimelineLiteObject()
-        {
-            ActionDataDict = new Dictionary<Type, Type>();
-            foreach (var actionType in Util_TypeCache.GetTypesDerivedFrom<ITLAction>())
-            {
-                if (actionType.IsGenericType || actionType.IsAbstract) continue;
-                Type actionDataType = actionType.GetProperty("TActionData",
-                    BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public).PropertyType;
-                ActionDataDict[actionDataType] = actionType;
-            }
-        }
-
-        static ITLTrack GetTrack(ITimelineLiteObject _timelineLiteObject, TLTrackData _trackData)
-        {
-            Type trackDataType = _trackData.GetType();
-            if (trackDataType == typeof(TLGroupTrackData))
-            {
-                TLGroupTrackData groupTrackData = _trackData as TLGroupTrackData;
-                TLGroupTrack groupTrack = new TLGroupTrack(_timelineLiteObject, _trackData as TLGroupTrackData);
-                foreach (TLTrackData childTrack in groupTrackData.ChildTracks)
-                {
-                    ITLTrack track = GetTrack(_timelineLiteObject, childTrack);
-                    if (track != null)
-                        groupTrack.ChildTracks.Add(track);
-                }
-
-                return groupTrack;
-            }
-            else /* if (typeof(TLBasicTrackData).IsAssignableFrom(trackDataType))*/
-            {
-                TLBasicTrackData basicTrackData = _trackData as TLBasicTrackData;
-                TLBasicTrack basicTrack = new TLBasicTrack(_timelineLiteObject, basicTrackData);
-                foreach (TLActionData actionData in basicTrackData.Clips)
-                {
-                    Type actionType;
-                    if (ActionDataDict.TryGetValue(actionData.GetType(), out actionType))
-                    {
-                        ITLAction action =
-                            Activator.CreateInstance(actionType, basicTrack, actionData) as ITLAction;
-                        if (action != null)
-                            basicTrack.Clips.Add(action);
-                    }
-                }
-                return basicTrack;
-            }
-        }
-        #endregion
+        
 
         T timelineData;
         bool initialized = false;
@@ -152,12 +101,12 @@ namespace CZToolKit.TimelineLite
 
         public TimelineLiteObject() { }
 
-        public TimelineLiteObject(T _timelineData)
+        public TimelineLiteObject(T timelineData)
         {
-            timelineData = _timelineData;
-            foreach (TLTrackData trackData in timelineData.Tracks)
+            this.timelineData = timelineData;
+            foreach (var trackData in this.timelineData.Tracks)
             {
-                ITLTrack track = GetTrack(this, trackData);
+                var track = TimelineLiteUtility.GetTrack(this, trackData);
                 if (track != null)
                     tracks.Add(track);
             }
