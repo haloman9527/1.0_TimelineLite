@@ -20,7 +20,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     public class ActionCreator : EditorWindow
     {
@@ -32,7 +32,7 @@ namespace CZToolKit.TimelineLite.Editors
         static ActionCreator instance;
 
 
-        [MenuItem("Assets/Create/CZToolKit/TimelineLite/Create TLAction Classes")]
+        [MenuItem("Assets/Create/Jiange/TimelineLite/Create TLAction Classes")]
         public static void Open()
         {
             instance = GetWindow<ActionCreator>(true, "Class Name");

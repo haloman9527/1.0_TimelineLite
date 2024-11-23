@@ -15,7 +15,7 @@
 #endregion
 using UnityEditor.IMGUI.Controls;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     public class TimelineLiteAssetTreeViewItem : TreeViewItem
     {

@@ -14,13 +14,13 @@
  */
 #endregion
 
-using CZToolKit.TimelineLite.Editors;
 using System;
+using Jiange.TimelineLite.Editors;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Example
+namespace Jiange.TimelineLite.Example
 {
     [Serializable]
     [HideInMenu]

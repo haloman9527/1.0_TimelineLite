@@ -21,7 +21,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     public static class TimelineLiteUtility
     {

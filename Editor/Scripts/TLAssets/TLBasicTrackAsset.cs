@@ -16,7 +16,7 @@
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     public interface ITLBasicTrackAsset
     {

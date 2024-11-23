@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     [SerializeField]
 #if ODIN_INSPECTOR

@@ -13,13 +13,13 @@
  *
  */
 #endregion
-using CZToolKit;
-using CZToolKit.Blackboard;
+using Jiange;
+using Jiange.Blackboard;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     [Serializable]
     public class PlayableEvent : UnityEvent<ITimelineLiteObject> { }

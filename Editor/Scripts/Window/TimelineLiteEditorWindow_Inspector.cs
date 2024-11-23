@@ -16,7 +16,7 @@
 using UnityEditor;
 using UnityEditor.Timeline;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     partial class TimelineLiteEditorWindow
     {

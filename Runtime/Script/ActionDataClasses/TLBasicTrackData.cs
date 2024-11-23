@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     /// <summary> 标准轨道数据类 </summary>
     [Serializable]

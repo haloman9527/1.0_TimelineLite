@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     public interface IDrawGizmos
     {

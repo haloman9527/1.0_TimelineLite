@@ -14,7 +14,7 @@
  */
 #endregion
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     public enum UpdateMode
     {

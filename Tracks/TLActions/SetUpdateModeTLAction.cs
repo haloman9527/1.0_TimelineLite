@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using CZToolKit;
+using Jiange;
 using System;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     [Serializable]
     public class SetUpdateModeTLAction : TLAction<SetUpdateModeTLActionData>

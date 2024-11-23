@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using CZToolKit.TimelineLite;
-using CZToolKit.TimelineLite.Editors;
+using Jiange.TimelineLite;
 using System;
+using Jiange.TimelineLite.Editors;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Example
+namespace Jiange.TimelineLite.Example
 {
     [Serializable]
     [TrackColor(0.96f, 0.44f, 0.47f)]

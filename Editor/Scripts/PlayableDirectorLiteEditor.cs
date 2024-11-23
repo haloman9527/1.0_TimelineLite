@@ -15,9 +15,9 @@
 #endregion
 using UnityEditor;
 using UnityEngine;
-using CZToolKitEditor;
+using JiangeEditor;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     [CustomEditor(typeof(PlayableDirectorLite))]
     public class PlayableDirectorLiteEditor : BaseEditor

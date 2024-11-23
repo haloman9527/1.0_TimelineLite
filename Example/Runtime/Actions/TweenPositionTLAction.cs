@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite.Example
+namespace Jiange.TimelineLite.Example
 {
     public class TweenPositionTLAction : TLAction<TweenPositionTLActionData>
     {

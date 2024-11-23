@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using CZToolKit;
+using Jiange;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     public interface ITimelineLiteObject
     {

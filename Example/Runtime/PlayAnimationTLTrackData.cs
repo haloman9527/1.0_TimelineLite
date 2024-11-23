@@ -17,7 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite.Example
+namespace Jiange.TimelineLite.Example
 {
     public class PlayAnimationTLTrackData : TLBasicTrackData
     {

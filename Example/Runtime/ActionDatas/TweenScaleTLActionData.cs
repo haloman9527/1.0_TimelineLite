@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using CZToolKit;
+using Jiange;
 using System;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite.Example
+namespace Jiange.TimelineLite.Example
 {
     [Serializable]
     public class TweenScaleTLActionData : TLActionData

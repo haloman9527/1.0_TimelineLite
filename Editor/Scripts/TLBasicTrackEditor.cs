@@ -19,7 +19,7 @@ using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     [CustomTimelineEditor(typeof(TLBasicTrackAsset))]
     public class TLBasicTrackEditor : TrackEditor

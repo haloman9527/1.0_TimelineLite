@@ -13,15 +13,16 @@
  *
  */
 #endregion
-using CZToolKit.Attributes;
+
 using System;
 using System.Collections.Generic;
+using Jiange.Attributes;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
-    [CreateAssetMenu(menuName = "CZToolKit/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
+    [CreateAssetMenu(menuName = "Jiange/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset
     {
         static Dictionary<Type, Func<TrackAsset, TLTrackData>> CustomGetTrackData = new Dictionary<Type, Func<TrackAsset, TLTrackData>>();

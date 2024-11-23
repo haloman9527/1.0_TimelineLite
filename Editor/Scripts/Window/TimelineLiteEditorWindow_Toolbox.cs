@@ -13,19 +13,19 @@
  *
  */
 #endregion
-using CZToolKit;
+using Jiange;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CZToolKitEditor;
+using JiangeEditor;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     partial class TimelineLiteEditorWindow
     {

@@ -14,10 +14,10 @@
  */
 #endregion
 // 请将此脚本放在Editor目录下
-using CZToolKit;
+using Jiange;
 using System;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     [Serializable]
     public class SetUpdateModeTLClipAsset : TLBasicClipAsset<SetUpdateModeTLActionData>

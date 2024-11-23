@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     /// <summary> 轨道数据基类 </summary>
     [Serializable]

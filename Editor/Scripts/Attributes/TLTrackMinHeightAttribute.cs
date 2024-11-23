@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace CZToolKit.TimelineLite.Editors
+namespace Jiange.TimelineLite.Editors
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class TLTrackMinHeightAttribute : Attribute

@@ -13,13 +13,13 @@
  *
  */
 #endregion
-using CZToolKit;
-using CZToolKit.TimelineLite.Editors;
+using Jiange;
 using System;
+using Jiange.TimelineLite.Editors;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace CZToolKit.TimelineLite.Example
+namespace Jiange.TimelineLite.Example
 {
     [Serializable]
     public class TweenScaleTLClipAsset : TLBasicClipAsset<TweenScaleTLActionData>

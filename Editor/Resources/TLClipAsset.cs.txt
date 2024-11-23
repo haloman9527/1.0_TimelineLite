@@ -1,6 +1,6 @@
 // 请将此脚本放在Editor目录下
-using CZToolKit.TimelineLite;
-using CZToolKit.TimelineLite.Editors;
+using Jiange.TimelineLite;
+using Jiange.TimelineLite.Editors;
 using System;
 using UnityEngine;
 using UnityEngine.Timeline;

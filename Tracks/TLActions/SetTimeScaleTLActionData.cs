@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using CZToolKit.TimelineLite;
+using Jiange.TimelineLite;
 using System;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite
+namespace Jiange.TimelineLite
 {
     /// <summary> <see cref="SetTimeScaleTLAction"/> </summary>
     [Serializable]

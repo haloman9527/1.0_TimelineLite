@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using CZToolKitEditor;
-using CZToolKit.TimelineLite.Editors;
+using JiangeEditor;
+using Jiange.TimelineLite.Editors;
 using UnityEditor;
 using UnityEngine;
 
-namespace CZToolKit.TimelineLite.Example.Editors
+namespace Jiange.TimelineLite.Example.Editors
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(TweenRotationTLClipAsset))]
