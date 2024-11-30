@@ -16,7 +16,7 @@
 
 using UnityEngine.Playables;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     public interface ITLAction
     {

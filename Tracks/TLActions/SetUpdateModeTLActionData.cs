@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using Jiange;
+using Moyo;
 using System;
 using UnityEngine;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     /// <summary> <see cref="SetUpdateModeTLAction"/> </summary>
     [Serializable]

@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using Jiange.TimelineLite;
+using Moyo.TimelineLite;
 using System;
-using Jiange.TimelineLite.Editors;
+using Moyo.TimelineLite.Editors;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Example
+namespace Moyo.TimelineLite.Example
 {
     [Serializable]
     [TrackColor(0.96f, 0.44f, 0.47f)]

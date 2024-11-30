@@ -20,7 +20,7 @@ using UnityEngine;
 using Sirenix.OdinInspector.Editor;
 #endif
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [CustomEditor(typeof(TLBasicTrackAsset), true)]
     public class TLBasicTrackAssetEditor : Editor

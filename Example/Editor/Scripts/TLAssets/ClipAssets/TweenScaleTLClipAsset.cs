@@ -13,13 +13,13 @@
  *
  */
 #endregion
-using Jiange;
+using Moyo;
 using System;
-using Jiange.TimelineLite.Editors;
+using Moyo.TimelineLite.Editors;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Example
+namespace Moyo.TimelineLite.Example
 {
     [Serializable]
     public class TweenScaleTLClipAsset : TLBasicClipAsset<TweenScaleTLActionData>

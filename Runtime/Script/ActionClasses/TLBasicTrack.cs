@@ -16,7 +16,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     /// <summary> 标准轨道 </summary>
     public class TLBasicTrack : TLTrack<TLBasicTrackData>

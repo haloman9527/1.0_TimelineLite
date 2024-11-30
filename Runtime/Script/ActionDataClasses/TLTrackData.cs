@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     /// <summary> 轨道数据基类 </summary>
     [Serializable]

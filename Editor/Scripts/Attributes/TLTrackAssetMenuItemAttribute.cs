@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     /// <summary> menuitem </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]

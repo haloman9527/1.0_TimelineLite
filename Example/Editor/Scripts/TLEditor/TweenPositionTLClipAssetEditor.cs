@@ -16,12 +16,12 @@
 
 #endregion
 
-using JiangeEditor;
-using Jiange.TimelineLite.Editors;
+using MoyoEditor;
+using Moyo.TimelineLite.Editors;
 using UnityEditor;
 using UnityEngine;
 
-namespace Jiange.TimelineLite.Example.Editors
+namespace Moyo.TimelineLite.Example.Editors
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(TweenPositionTLClipAsset))]

@@ -14,10 +14,10 @@
  */
 #endregion
 // 请将此脚本放在Editor目录下
-using Jiange;
+using Moyo;
 using System;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [Serializable]
     public class SetUpdateModeTLClipAsset : TLBasicClipAsset<SetUpdateModeTLActionData>

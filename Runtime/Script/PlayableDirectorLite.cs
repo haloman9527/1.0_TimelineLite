@@ -13,13 +13,13 @@
  *
  */
 #endregion
-using Jiange;
-using Jiange.Blackboard;
+using Moyo;
 using System;
+using Moyo.Blackboard;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     [Serializable]
     public class PlayableEvent : UnityEvent<ITimelineLiteObject> { }

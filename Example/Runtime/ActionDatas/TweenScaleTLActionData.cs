@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using Jiange;
+using Moyo;
 using System;
 using UnityEngine;
 
-namespace Jiange.TimelineLite.Example
+namespace Moyo.TimelineLite.Example
 {
     [Serializable]
     public class TweenScaleTLActionData : TLActionData

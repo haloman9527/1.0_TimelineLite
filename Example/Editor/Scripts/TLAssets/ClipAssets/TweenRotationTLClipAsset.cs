@@ -15,12 +15,12 @@
 #endregion
 
 using System;
-using Jiange.TimelineLite.Editors;
+using Moyo.TimelineLite.Editors;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Example
+namespace Moyo.TimelineLite.Example
 {
     [Serializable]
     public class TweenRotationTLClipAsset : TLBasicClipAsset<TweenRotationTLActionData>, ISceneGUI

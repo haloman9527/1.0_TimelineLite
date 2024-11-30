@@ -17,7 +17,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     public abstract class TLBasicClipAsset : PlayableAsset
     {

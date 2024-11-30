@@ -19,9 +19,9 @@ using UnityEditor.Timeline;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using JiangeEditor;
+using MoyoEditor;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     public enum SearchMode { StartsWith, Contains, EndsWith }
 
@@ -33,7 +33,7 @@ namespace Jiange.TimelineLite.Editors
         #endregion
 
         #region Static
-        [MenuItem("Tools/Jiange/TimelineLite/Timeline Projects")]
+        [MenuItem("Tools/Moyo/TimelineLite/Timeline Projects")]
         public static void Open()
         {
             if (Instance == null)

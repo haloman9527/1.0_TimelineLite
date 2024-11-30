@@ -17,7 +17,7 @@ using System;
 using UnityEngine.Playables;
 using UnityEngine;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     /// <summary> Action基本信息 </summary>
     [Serializable]

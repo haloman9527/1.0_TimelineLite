@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using Jiange;
+using Moyo;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     public interface ITimelineLiteObject
     {

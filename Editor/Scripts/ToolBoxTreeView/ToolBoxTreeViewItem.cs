@@ -14,11 +14,11 @@
  */
 #endregion
 using System;
-using JiangeEditor;
+using MoyoEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     public class ToolboxTreeViewItem : TreeViewItem
     {

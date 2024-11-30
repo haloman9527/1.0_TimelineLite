@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class TLTrackMinHeightAttribute : Attribute

@@ -16,7 +16,7 @@
 using System;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [Serializable]
     [TrackColor(0.84f, 1.00f, 0.00f)]

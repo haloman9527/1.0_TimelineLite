@@ -15,9 +15,9 @@
 #endregion
 using UnityEditor;
 using UnityEngine;
-using JiangeEditor;
+using MoyoEditor;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [CustomEditor(typeof(PlayableDirectorLite))]
     public class PlayableDirectorLiteEditor : BaseEditor

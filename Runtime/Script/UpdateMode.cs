@@ -14,7 +14,7 @@
  */
 #endregion
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     public enum UpdateMode
     {

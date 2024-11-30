@@ -15,10 +15,10 @@
 #endregion
 
 using System;
-using Jiange.TimelineLite.Editors;
+using Moyo.TimelineLite.Editors;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Example
+namespace Moyo.TimelineLite.Example
 {
     [Serializable]
     [TrackColor(0f, 0.5f, 0f)]

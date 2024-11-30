@@ -13,19 +13,19 @@
  *
  */
 #endregion
-using Jiange;
+using Moyo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using JiangeEditor;
+using MoyoEditor;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     partial class TimelineLiteEditorWindow
     {

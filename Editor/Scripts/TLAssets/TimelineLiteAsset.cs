@@ -16,13 +16,13 @@
 
 using System;
 using System.Collections.Generic;
-using Jiange.Attributes;
+using Moyo.Attributes;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
-    [CreateAssetMenu(menuName = "Jiange/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
+    [CreateAssetMenu(menuName = "Moyo/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset
     {
         static Dictionary<Type, Func<TrackAsset, TLTrackData>> CustomGetTrackData = new Dictionary<Type, Func<TrackAsset, TLTrackData>>();

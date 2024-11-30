@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using Jiange.TimelineLite;
+using Moyo.TimelineLite;
 using System;
 using UnityEngine;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     /// <summary> <see cref="SetTimeScaleTLAction"/> </summary>
     [Serializable]

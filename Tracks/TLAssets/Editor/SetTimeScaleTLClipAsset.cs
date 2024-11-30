@@ -17,7 +17,7 @@
 using System;
 using UnityEngine;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [Serializable]
     public class SetTimeScaleTLClipAsset : TLBasicClipAsset<SetTimeScaleTLActionData>

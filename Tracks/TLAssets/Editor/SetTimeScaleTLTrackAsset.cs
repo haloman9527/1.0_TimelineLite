@@ -14,11 +14,11 @@
  */
 #endregion
 // 请将此脚本放在Editor目录下
-using Jiange.TimelineLite.Editors;
+using Moyo.TimelineLite.Editors;
 using System;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [Serializable]
     [TrackColor(0.99f, 1.00f, 0.83f)]

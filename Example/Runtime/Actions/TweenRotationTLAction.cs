@@ -16,7 +16,7 @@
 using System;
 using UnityEngine;
 
-namespace Jiange.TimelineLite.Example
+namespace Moyo.TimelineLite.Example
 {
     [Serializable]
     public class TweenRotationTLAction : TLAction<TweenRotationTLActionData>

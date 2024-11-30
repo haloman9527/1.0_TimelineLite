@@ -14,13 +14,13 @@
  */
 #endregion
 #if UNITY_2019_1_OR_NEWER
-using Jiange;
+using Moyo;
 using Sirenix.Utilities;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Jiange.TimelineLite.Editors
+namespace Moyo.TimelineLite.Editors
 {
     [CustomTimelineEditor(typeof(TLBasicClipAsset))]
     public class TLBasicClipEditor : ClipEditor

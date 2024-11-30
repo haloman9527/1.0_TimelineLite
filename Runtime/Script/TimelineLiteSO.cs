@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine;
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     [SerializeField]
 #if ODIN_INSPECTOR

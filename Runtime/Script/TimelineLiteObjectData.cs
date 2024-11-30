@@ -21,7 +21,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 #endif
 
-namespace Jiange.TimelineLite
+namespace Moyo.TimelineLite
 {
     [Serializable]
 #if ODIN_INSPECTOR
