@@ -40,7 +40,7 @@ namespace Moyo.TimelineLite
             else
                 s_ActionDataDict.Clear();
             
-            foreach (var actionType in Util_TypeCache.GetTypesDerivedFrom<ITLAction>())
+            foreach (var actionType in TypesCache.GetTypesDerivedFrom<ITLAction>())
             {
                 if (actionType.IsGenericType || actionType.IsAbstract) continue;
                 var actionDataType = actionType.GetProperty("TActionData",

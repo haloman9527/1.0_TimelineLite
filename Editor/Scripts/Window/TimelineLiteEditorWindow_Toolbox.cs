@@ -308,7 +308,7 @@ namespace Moyo.TimelineLite.Editors
 
         public T CreateTrack<T>(string _path) where T : TrackAsset
         {
-            return CreateTrack(typeof(T), _path) as T;
+            return CreateTrack(TypeCache<T>.TYPE, _path) as T;
 
         }
 
