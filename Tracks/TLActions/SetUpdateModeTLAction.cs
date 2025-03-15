@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using Moyo;
+using Atom;
 using System;
 using UnityEngine;
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     [Serializable]
     public class SetUpdateModeTLAction : TLAction<SetUpdateModeTLActionData>

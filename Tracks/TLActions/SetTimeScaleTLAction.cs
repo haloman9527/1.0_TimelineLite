@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using Moyo.TimelineLite;
+using Atom.TimelineLite;
 using System;
 using UnityEngine;
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     [Serializable]
     public class SetTimeScaleTLAction : TLAction<SetTimeScaleTLActionData>

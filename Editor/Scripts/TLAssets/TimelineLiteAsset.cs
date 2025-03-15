@@ -16,11 +16,11 @@
 
 using System;
 using System.Collections.Generic;
-using Moyo.Unity;
+using Atom.Unity;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     [CreateAssetMenu(menuName = "Moyo/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset

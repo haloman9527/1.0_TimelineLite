@@ -19,7 +19,7 @@ using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     [CustomTimelineEditor(typeof(TLBasicTrackAsset))]
     public class TLBasicTrackEditor : TrackEditor

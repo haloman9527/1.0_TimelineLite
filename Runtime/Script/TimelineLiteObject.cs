@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using Moyo;
+using Atom;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     public interface ITimelineLiteObject
     {

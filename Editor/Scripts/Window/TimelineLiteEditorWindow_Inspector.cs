@@ -16,7 +16,7 @@
 using UnityEditor;
 using UnityEditor.Timeline;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     partial class TimelineLiteEditorWindow
     {

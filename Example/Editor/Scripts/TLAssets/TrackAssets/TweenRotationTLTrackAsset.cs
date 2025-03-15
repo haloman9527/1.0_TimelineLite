@@ -13,12 +13,12 @@
  *
  */
 #endregion
-using Moyo.TimelineLite;
+using Atom.TimelineLite;
 using System;
-using Moyo.TimelineLite.Editors;
+using Atom.TimelineLite.Editors;
 using UnityEngine.Timeline;
 
-namespace Moyo.TimelineLite.Example
+namespace Atom.TimelineLite.Example
 {
     [Serializable]
     [TrackColor(0.96f, 0.44f, 0.47f)]

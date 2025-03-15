@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine;
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     [SerializeField]
 #if ODIN_INSPECTOR

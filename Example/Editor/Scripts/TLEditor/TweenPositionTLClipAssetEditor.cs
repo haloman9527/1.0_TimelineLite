@@ -16,12 +16,12 @@
 
 #endregion
 
-using Moyo.UnityEditors;
-using Moyo.TimelineLite.Editors;
+using Atom.TimelineLite.Editors;
+using Atom.UnityEditors;
 using UnityEditor;
 using UnityEngine;
 
-namespace Moyo.TimelineLite.Example.Editors
+namespace Atom.TimelineLite.Example.Editors
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(TweenPositionTLClipAsset))]

@@ -20,7 +20,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     public class ActionCreator : EditorWindow
     {

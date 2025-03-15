@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     /// <summary> 轨道数据基类 </summary>
     [Serializable]

@@ -15,7 +15,7 @@
 #endregion
 using UnityEditor.IMGUI.Controls;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     public class TimelineLiteAssetTreeViewItem : TreeViewItem
     {

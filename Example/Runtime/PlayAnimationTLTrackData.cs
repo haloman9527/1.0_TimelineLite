@@ -17,7 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Moyo.TimelineLite.Example
+namespace Atom.TimelineLite.Example
 {
     public class PlayAnimationTLTrackData : TLBasicTrackData
     {

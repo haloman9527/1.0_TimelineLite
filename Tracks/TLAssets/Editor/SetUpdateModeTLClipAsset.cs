@@ -14,10 +14,10 @@
  */
 #endregion
 // 请将此脚本放在Editor目录下
-using Moyo;
+using Atom;
 using System;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     [Serializable]
     public class SetUpdateModeTLClipAsset : TLBasicClipAsset<SetUpdateModeTLActionData>

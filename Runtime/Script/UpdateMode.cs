@@ -14,7 +14,7 @@
  */
 #endregion
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     public enum UpdateMode
     {

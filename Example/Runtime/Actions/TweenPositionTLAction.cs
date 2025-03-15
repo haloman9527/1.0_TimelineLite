@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine;
 
-namespace Moyo.TimelineLite.Example
+namespace Atom.TimelineLite.Example
 {
     public class TweenPositionTLAction : TLAction<TweenPositionTLActionData>
     {

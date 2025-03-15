@@ -15,12 +15,12 @@
 #endregion
 
 using System;
-using Moyo.TimelineLite.Editors;
+using Atom.TimelineLite.Editors;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace Moyo.TimelineLite.Example
+namespace Atom.TimelineLite.Example
 {
     [Serializable]
     [HideInMenu]

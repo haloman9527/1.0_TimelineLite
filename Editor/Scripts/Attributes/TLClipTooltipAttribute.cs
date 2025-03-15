@@ -15,7 +15,7 @@
 #endregion
 using System;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     public class TLClipTooltipAttribute : Attribute

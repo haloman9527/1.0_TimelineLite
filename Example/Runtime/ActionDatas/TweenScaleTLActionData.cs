@@ -13,11 +13,11 @@
  *
  */
 #endregion
-using Moyo;
+using Atom;
 using System;
 using UnityEngine;
 
-namespace Moyo.TimelineLite.Example
+namespace Atom.TimelineLite.Example
 {
     [Serializable]
     public class TweenScaleTLActionData : TLActionData

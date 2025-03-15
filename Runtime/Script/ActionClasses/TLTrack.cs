@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace Moyo.TimelineLite
+namespace Atom.TimelineLite
 {
     public interface ITLTrack
     {

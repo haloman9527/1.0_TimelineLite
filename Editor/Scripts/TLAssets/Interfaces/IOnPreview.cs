@@ -15,7 +15,7 @@
 #endregion
 using UnityEngine.Timeline;
 
-namespace Moyo.TimelineLite.Editors
+namespace Atom.TimelineLite.Editors
 {
     public interface IOnPreview
     {
