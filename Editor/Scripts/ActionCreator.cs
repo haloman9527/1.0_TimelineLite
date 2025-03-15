@@ -32,7 +32,7 @@ namespace Atom.TimelineLite.Editors
         static ActionCreator instance;
 
 
-        [MenuItem("Assets/Create/Moyo/TimelineLite/Create TLAction Classes")]
+        [MenuItem("Assets/Create/Atom/TimelineLite/Create TLAction Classes")]
         public static void Open()
         {
             instance = GetWindow<ActionCreator>(true, "Class Name");

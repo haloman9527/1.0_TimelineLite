@@ -33,7 +33,7 @@ namespace Atom.TimelineLite.Editors
         #endregion
 
         #region Static
-        [MenuItem("Tools/Moyo/TimelineLite/Timeline Projects")]
+        [MenuItem("Tools/Atom/TimelineLite/Timeline Projects")]
         public static void Open()
         {
             if (Instance == null)

@@ -22,7 +22,7 @@ using UnityEngine.Timeline;
 
 namespace Atom.TimelineLite.Editors
 {
-    [CreateAssetMenu(menuName = "Moyo/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
+    [CreateAssetMenu(menuName = "Atom/TimelineLite/New TimelineLiteAsset", fileName = "New TimelineLiteAsset")]
     public class TimelineLiteAsset : TimelineAsset
     {
         static Dictionary<Type, Func<TrackAsset, TLTrackData>> CustomGetTrackData = new Dictionary<Type, Func<TrackAsset, TLTrackData>>();

@@ -1,6 +1,6 @@
 // 请将此脚本放在Editor目录下
-using Moyo.TimelineLite;
-using Moyo.TimelineLite.Editors;
+using Atom.TimelineLite;
+using Atom.TimelineLite.Editors;
 using System;
 using UnityEngine;
 using UnityEngine.Timeline;
