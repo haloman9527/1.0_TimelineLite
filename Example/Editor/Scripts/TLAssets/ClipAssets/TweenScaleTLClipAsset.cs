@@ -25,7 +25,7 @@ namespace Atom.TimelineLite.Example
     public class TweenScaleTLClipAsset : TLBasicClipAsset<TweenScaleTLActionData>
     {
         public Vector3 from, to;
-        public EasingType ease = EasingType.Linear;
+        public Easing.EasingType ease = Easing.EasingType.Linear;
 
         /// <summary> 创建<see cref="TweenScaleTLActionData" />对象 </summary>
         public override TLActionData CreateActionData()

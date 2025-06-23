@@ -28,7 +28,7 @@ namespace Atom.TimelineLite.Example
     {
         public Vector3 from;
         public Vector3 to;
-        public EasingType ease = EasingType.Linear;
+        public Easing.EasingType ease = Easing.EasingType.Linear;
 
         public override TLActionData CreateActionData()
         {

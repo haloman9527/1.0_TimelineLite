@@ -23,6 +23,6 @@ namespace Atom.TimelineLite.Example
     public class TweenPositionTLActionData : TLActionData
     {
         public Vector3 startPosition, endPosition;
-        public EasingType ease = EasingType.Linear;
+        public Easing.EasingType ease = Easing.EasingType.Linear;
     }
 }
