@@ -17,7 +17,6 @@ using UnityEngine;
 
 namespace Atom.TimelineLite
 {
-    [SerializeField]
 #if ODIN_INSPECTOR
     public class TimelineLiteSO : Sirenix.OdinInspector.SerializedScriptableObject
 #else
